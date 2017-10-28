@@ -85,10 +85,10 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
 			if (atacado.serAtacado((int) (caster.getAtaque() * caster.getCasta().getDañoCritico())) > 0) {
-				return true;
+				return CASTEO_EXITOSO;
 			}
 		}
-		return false;
+		return CASTEO_FALLIDO;
 	}
 
 
@@ -119,9 +119,9 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 			} else {
 				this.setProbabilidadEvitarDaño(PROBEVITARDANIO);
 			}
-			return true;
+			return CASTEO_EXITOSO;
 		}
-		return false;
+		return CASTEO_FALLIDO;
 	}
 
 	/** Not implemented yet.
@@ -131,7 +131,7 @@ public Asesino(final double probCrit, final double evasion, final double danioCr
 	 */
 	@Override
 	public final boolean habilidad3(final Personaje caster, final Peleable atacado) {
-		return false;
+		return CASTEO_FALLIDO;
 	}
 	/** Retorna un entero.
 	 * Que otorga el bonus de  destreza perteneciente a esta casta.

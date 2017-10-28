@@ -78,10 +78,10 @@ public class Hechicero extends Casta {
 		if (caster.getEnergia() >= ENERGIAMINIMA) {
 			caster.reducirEnergia(ENERGIAMINIMA);
 			if (atacado.serAtacado((int) (caster.calcularPuntosDeMagia() * MULTIPLICADORMAGIA)) > 0) {
-				return true;
+				return CASTEO_EXITOSO;
 			}
 		}
-		return false;
+		return CASTEO_FALLIDO;
 	}
 
 
@@ -106,10 +106,10 @@ public class Hechicero extends Casta {
 			caster.reducirEnergia(ENERGIAMINIMA);
 			if (aliado instanceof Personaje) {
 				((Personaje) aliado).serCurado(caster.calcularPuntosDeMagia());
-				return true;
+				return CASTEO_EXITOSO;
 			}
 		}
-		return false;
+		return CASTEO_FALLIDO;
 	}
 
 	/** Retorna un booleano dependiendo de si se
@@ -138,11 +138,11 @@ public class Hechicero extends Casta {
 						serRobadoSalud(caster.calcularPuntosDeMagia() / DIVISORDEMAGIA);
 				caster.serEnergizado(energiaRobada);
 				caster.serCurado(saludRobada);
-				return true;
+				return CASTEO_EXITOSO;
 			}
 
 		}
-		return false;
+		return CASTEO_FALLIDO;
 	}
 	/** Retorna un entero que otorga el bonus de
 	 * inteligencia perteneciente a esta casta.

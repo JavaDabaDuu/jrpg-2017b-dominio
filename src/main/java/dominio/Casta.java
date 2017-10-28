@@ -36,7 +36,14 @@ public abstract class Casta implements Serializable {
 	 *  Numero por el cual sera multiplicado el ataque por defecto.
 	 */
 	private static final double DANIOCRITICO = 1.5;
-
+	/**
+	 *  Variable que indica que no se pudo castear la habilidad
+	 */
+	protected static final boolean CASTEO_FALLIDO = false;
+	/**
+	 *  Variable que indica que se pudo castear la habilidad
+	 */
+	protected static final boolean CASTEO_EXITOSO = true;
 
 	/** Clase abstracta de la cual heredarán las
 	 * clases Asesion,Guerrero,Hechicero.
