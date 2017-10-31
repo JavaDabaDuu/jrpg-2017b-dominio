@@ -2,170 +2,171 @@
 package dominio;
 
 /**
- * La clase NonPlayableCharacter (NPC).
- * Representa a los personajes del juego que no son
- * controlados por humanos.
- * Implementa la Interfaz Peleable.
+ * La clase NonPlayableCharacter (NPC) representa a los personajes del juego que
+ * no son controlados por humanos.<br>
+ * Hereda de la clase MadreDeTodo e implementa la interfaz Peleable.
  */
 
 public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	/**
-	 * Numero que sirve de argumento para obtener la dificultad.
+	 * Número que sirve de argumento para obtener la dificultad.
 	 */
-	private static final int ELEGIRDIF = 3;
+	private static final int ELEGIR_DIFERENCIA = 3;
 	/**
 	 * Salud del NPC.
 	 */
 	private int salud;
 	/**
-	 * Dificultad aleatoria NPC.
+	 * Dificultad aleatoria del NPC.
 	 */
-	private static final int DIFICULTADALEATORIA = -1;
+	private static final int DIFICULTAD_ALEATORIA = -1;
 	/**
 	 * Multiplicador de experiencia otorgada por el npc.
 	 */
-	private static final int MULTIPLICADOREXPNPC = 30;
+	private static final int MULTIPLICADOR_EXPERIENCIA = 30;
 	/**
-	 * Multiplicador de fuerza para el golpe critico del npc.
+	 * Multiplicador de fuerza para el golpe crítico del npc.
 	 */
-	private static final double MULTIPLICADORFUERZA = 1.5;
+	private static final double MULTIPLICADOR_FUERZA_GOLPE_CRITICO = 1.5;
 	/**
-	 * Numero a superar para poder ser atacado.
+	 * Número a superar para poder ser atacado.
 	 */
-	private static final double NUMEROPARASERATACADO = 0.15;
+	private static final double NUMERO_PARA_SER_ATACADO = 0.15;
 	/**
-	 * Numero a superar para poder atacar.
+	 * Número a superar para poder atacar.
 	 */
-	private static final double NUMEROPARAATACAR = 0.15;
+	private static final double NUMERO_PARA_ATACAR = 0.15;
 	/**
-	 * Numero por el cual se divide la defensa cuando el npc es atacado.
+	 * Número por el que se divide la defensa cuando el npc es atacado.
 	 */
-	private static final int DIVISORDEDEFENSA = 2;
+	private static final int DIVISOR_DE_DEFENSA = 2;
 	/**
 	 * Fuerza base del NPC.
 	 */
-	private static final int MODIFICADORBASEF = 10;
+	private static final int MODIFICADOR_BASE_FUERZA = 10;
 	/**
 	 * Salud base del NPC.
 	 */
-	private static final int MODIFICADORBASES = 30;
+	private static final int MODIFICADOR_BASE_SALUD = 30;
 	/**
 	 * Defensa base del NPC.
 	 */
-	private static final int MODIFICADORBASED = 2;
+	private static final int MODIFICADOR_BASE_DEFENSA = 2;
 	/**
-	 * Multiplicador fuerza del NPC.
+	 * Multiplicador de fuerza del NPC.
 	 */
-	private static final int MULTIPLICADORF = 3;
+	private static final int MULTIPLICADOR_FUERZA = 3;
 	/**
-	 * Multiplicador salud del NPC.
+	 * Multiplicador de salud del NPC.
 	 */
-	private static final int MULTIPLICADORS = 15;
+	private static final int MULTIPLICADOR_SALUD = 15;
 	/**
-	 * Multiplicador defensa del NPC.
+	 * Multiplicador de defensa del NPC.
 	 */
-	private static final int MULTIPLICADORD = 1;
+	private static final int MULTIPLICADOR_DEFENSA = 1;
 
 	/**
-	 * Constructor de la Clase.
-	 * Dependiendo de la dificultad que se pasa por parámetro al
-	 * constructor, aumentará o disminuirá el valor de los
-	 * atributos fuerza salud y defensa.
-	 * @param nombre Nombre que se le otorga al NPC
-	 * @param nivel Nivel que se le otorga al NPC
-	 * @param dificultadNPC Valor entero
-	 * que produce una variación en los atributos.
+	 * Constructor parametrizado de la clase NonPlayableCharacter. Dependiendo
+	 * de la dificultad que se pasa por parámetro al constructor, aumentará o
+	 * disminuirá el valor de los atributos fuerza salud y defensa.
+	 * 
+	 * @param nombre
+	 *            es el nombre del NPC.
+	 * @param nivel
+	 *            es el nivel del NPC.
+	 * @param dificultadNPC
+	 *            es la dificultad del NPC.
 	 */
 	public NonPlayableCharacter(final String nombre, final int nivel, final int dificultadNPC) {
 		super(0, 0, nivel, nombre);
 
 		int dificultad;
-		if (dificultadNPC == DIFICULTADALEATORIA) {
-			dificultad = this.getRandom().nextInt(ELEGIRDIF);
+		if (dificultadNPC == DIFICULTAD_ALEATORIA) {
+			dificultad = this.getRandom().nextInt(ELEGIR_DIFERENCIA);
 		} else {
 			dificultad = dificultadNPC;
 		}
 
-		this.aumentarFuerza(MODIFICADORBASEF * (dificultad + 1) +
-				(nivel - 1) * MULTIPLICADORF * (dificultad + 1));
-		this.salud = MODIFICADORBASES * (dificultad + 1) + (nivel - 1) * MULTIPLICADORS * (dificultad + 1);
-		this.aumentarDefensa(MODIFICADORBASED * (dificultad + 1) +
-				(nivel - 1) * MULTIPLICADORD * (dificultad + 1));
+		this.aumentarFuerza(
+				MODIFICADOR_BASE_FUERZA * (dificultad + 1) + (nivel - 1) * MULTIPLICADOR_FUERZA * (dificultad + 1));
+		this.salud = MODIFICADOR_BASE_SALUD * (dificultad + 1) + (nivel - 1) * MULTIPLICADOR_SALUD * (dificultad + 1);
+		this.aumentarDefensa(
+				MODIFICADOR_BASE_DEFENSA * (dificultad + 1) + (nivel - 1) * MULTIPLICADOR_DEFENSA * (dificultad + 1));
 	}
 
 	/**
-	 * Retorna un entero.
-	 * Que la cantidad de experiencia que
-	 * debe sumarse al Personaje que
-	 * produjo la disminución de la salud del
-	 * NPC a 0. La misma sera MULTIPLCADOREXPNPC veces
-	 * el valor del atributo nivel
-	 * @return Cantidad de experiencia a otorgar
+	 * Método que indica la cantidad de experiencia que debe sumarse al
+	 * personaje que produjo la disminución de la salud del NPC a 0, cuyo valor
+	 * es proporcional al nivel del npc y calculado por el multiplicador de
+	 * experiencia.
+	 * 
+	 * @return Cantidad de experiencia a otorgar al npc.
 	 */
 	@Override
 	public final int otorgarExp() {
-		return this.getNivel() * MULTIPLICADOREXPNPC;
+		return this.getNivel() * MULTIPLICADOR_EXPERIENCIA;
 	}
 
-
 	/**
-	 * Retorna un booleano.
-	 * Que indica si el NPC esta vivo, evaluando si el mismo tiene
-	 * salud mayor a 0.
-	 * @return true si el NPC está vivo, false para lo contrario.
+	 * Método que indica si el NPC está vivo en base a salud.
+	 * 
+	 * @return un booleano que indica si está vivo.
 	 */
 	@Override
 	public final boolean estaVivo() {
-		return salud > 0;
+		return this.salud > 0;
 	}
 
-
 	/**
-	 * Retorna un entero que representa los puntos de salud del NPC.
-	 * @return Devuelve la cantidad de vida actual del NPC
+	 * Getter de la salud del NPC.
+	 * 
+	 * @return la salud del NPC
 	 */
 	@Override
 	public final int getSalud() {
-		return salud;
+		return this.salud;
 	}
 
 	/**
-	 * Asigna un valor entero que representará la salud del NPC.
-	 * @param salud Entero que indica la nueva salud del NPC.
+	 * Setter de la salud del NPC.
+	 * 
+	 * @param salud
+	 *            es la nueva salud del NPC.
 	 */
 	public final void setSalud(final int salud) {
 		this.salud = salud;
 	}
 
 	/**
-	 * Método que, dependiendo de MyRandom.nextdouble() y NUMEROPARAATACAR.
-	 * Puede ejecutar un ataque
-	 * mejorado por el atributo MULTIPLICADORFUERZA
-	 * @param atacado Peleable que recibe el ataque
-	 * @return Retorna un entero que representa
-	 * los puntos de daño realizados
+	 * Método que decide si atacar con golpe crítico a un peleable.
+	 * 
+	 * @param atacado
+	 *            es el peleable que recibe el ataque del npc
+	 * @return el daño infringido al peleable
 	 */
 	@Override
 	public final int atacar(final Peleable atacado) {
-		if (this.getRandom().nextDouble() <= NUMEROPARAATACAR) {
-			return atacado.serAtacado((int) (this.getAtaque() * MULTIPLICADORFUERZA));
+		if (this.getRandom().nextDouble() <= NUMERO_PARA_ATACAR) {
+			return atacado.serAtacado((int) (this.getAtaque() * MULTIPLICADOR_FUERZA_GOLPE_CRITICO));
 		} else {
 			return atacado.serAtacado(this.getAtaque());
 		}
 	}
 
 	/**
-	 * Dependiendo de MyRandom.nextdouble() y NUMEROPARASERATACADO.
-	 * Puede disminuir el daño dependiendo del atributo DIVISORDEDEFENSA.
-	 * @param danio valor a ser descontado del atributo salud.
-	 * @return Retorna 0 si el ataque no fue realizado con exito
+	 * Método que decide si disminuir el daño recibido en un ataque o
+	 * directamente no aplicarlo.
+	 * 
+	 * @param danio
+	 *            es el daño que impacta sobre la salud del NPC.
+	 * @return retorna el daño que hizo efecto sobre el NPC.
 	 */
 	@Override
 	public final int serAtacado(int danio) {
-		if (this.getRandom().nextDouble() >= NUMEROPARASERATACADO) {
-			danio -= this.getDefensa() / DIVISORDEDEFENSA;
+		if (this.getRandom().nextDouble() >= NUMERO_PARA_SER_ATACADO) {
+			danio -= this.getDefensa() / DIVISOR_DE_DEFENSA;
 			if (danio > 0) {
-				salud -= danio;
+				this.salud -= danio;
 				return danio;
 			}
 			return 0;
@@ -174,21 +175,27 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	}
 
 	/**
-	 * Método sin implementar.
+	 * Acción desencadenada tras jugar un turno.
 	 */
 	@Override
-	public void despuesDeTurno() { }
-	/**
-	 * Método sin implementar.
-	 * @param exp Experiencia a aumentar al npc.
-	 */
-	public void ganarExperiencia(final int exp) {
+	public void despuesDeTurno() {
 
 	}
 
 	/**
-	 * Retorna un entero que representa el atributo de Fuerza del NPC.
-	 * @return retorna el ataque del NPC.
+	 * Método que permite ganar experiencia.
+	 * 
+	 * @param experiencia
+	 *            es la experiencia a aumentar al npc.
+	 */
+	public void ganarExperiencia(final int experiencia) {
+
+	}
+
+	/**
+	 * Getter del ataque del NPC.
+	 * 
+	 * @return el atque del NPC.
 	 */
 	@Override
 	public final int getAtaque() {
@@ -196,8 +203,10 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	}
 
 	/**
-	 * Asigna un valor entero que representará el ataque del NPC.
-	 * @param ataque Entero que indica la nueva fuerza del NPC.
+	 * Setter del ataque del NPC.
+	 * 
+	 * @param ataque
+	 *            es la capacidad de ataque ganada.
 	 */
 	@Override
 	public final void setAtaque(final int ataque) {
@@ -205,13 +214,12 @@ public class NonPlayableCharacter extends MadreDeTodo implements Peleable {
 	}
 
 	/**
-	 * Retorna siempre un entero de valor 0.
-	 * @return retorna 0 porque NPC no tiene magia.
+	 * Getter de la magia del NPC.
+	 * 
+	 * @return retorna 0 porque un NPC no tiene magia.
 	 */
 	@Override
 	public final int getMagia() {
 		return 0;
 	}
 }
-
-

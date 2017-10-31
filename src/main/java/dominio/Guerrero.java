@@ -1,132 +1,109 @@
 
 package dominio;
-	/** La clase Guerrero es una casta de Personaje.
-	 * Hereda de la clase Casta.
-	 * posee dos constructores.
-	 * El constructor, llama al constructor de la
-	 * clase padre (Casta),
-	 * pasándole los argumentos recibidos
-	 * por el constructor hijo
-	 */
+
+/**
+ * La clase Guerrero es una casta de Personaje. Hereda de la clase Casta. posee
+ * dos constructores. El constructor, llama al constructor de la clase padre
+ * (Casta), pasándole los argumentos recibidos por el constructor hijo
+ */
+@SuppressWarnings("serial")
 public class Guerrero extends Casta {
 	/**
-	 * Energia minima requerida para realizar una habilidad.
+	 * Energía mínima requerida para realizar una habilidad.
 	 */
-	private static final int ENERGIAMINIMA = 10;
+	private static final int ENERGIA_MINIMA = 10;
 	/**
-	 * Numero por el cual sera multiplicado el ataque del guerrero.
+	 * Número por el cual será multiplicado el ataque del guerrero.
 	 */
-	private static final int MULTIPLICADORFUERZA = 2;
+	private static final int MULTIPLICADOR_FUERZA = 2;
 	/**
 	 * Bonus de fuerza por ser de la casta Guerrero.
 	 */
-	private static final int BONUSFUERZA = 5;
+	private static final int BONUS_FUERZA = 5;
 
-	/** La clase Guerrero es una casta de Personaje.
-	 * Hereda de la clase Casta.
-	 * posee dos constructores.
-	 * El constructor, llama al constructor de la
-	 * clase padre (Casta),
-	 * pasándole los argumentos recibidos
-	 * por el constructor hijo
-	 * @param probCrit Probabilidad de que el
-	 * personaje realice un golpe crítico
-	 * @param evasion Probabilidad de que el
-	 * personaje evite un golpe crítico
-	 * @param danioCrit Valor por el cual será
-	 * multiplicado el golpe básico
+	/**
+	 * Constructor parametrizado de la clase Guerrero.<br>
+	 * Instancia un guerrero invocando al constructor paramentrizado de su padre
+	 * Casta.
+	 * 
+	 * @param probCrit
+	 *            Probabilidad de que el personaje realice un golpe crítico
+	 * @param evasion
+	 *            Probabilidad de que el personaje evite un golpe crítico
+	 * @param danioCrit
+	 *            Valor por el cual será multiplicado el golpe básico
 	 */
 	public Guerrero(final double probCrit, final double evasion, final double danioCrit) {
 		super(probCrit, evasion, danioCrit);
 	}
-	/** El constructor por defecto, llama al constructor por defecto.
-	 * padre (Casta), inicializando probabilidadGolpeCritico,
-	 *  probabilidadEvitarDaño, dañoCritico,
-	 * con valores predeterminados.
+
+	/**
+	 * Constructor por defecto de la clase Guerrero.<br>
+	 * Instancia un guerrero invocando al contructor por defecto de su padre
+	 * Casta.
 	 */
 	public Guerrero() {
 		super();
 	}
 
-	/** Retorna un booleano.
-	 * Dependiendo de si se
-	 * realizó exitosamente o no el ataque.
-	 * La primera condición para que el ataque
-	 * pueda realizarse es que el atacante(caster) posea 10 o
-	 * más del atributo energia ya que estos se
-	 * descuentan seguido de comprobar que los posee,
-	 *  de lo contrario el ataque no será posible
-	 *   y se retornará false
-	 * @param caster Personaje que realiza el ataque.
-	 * @param atacado puede ser una instancia de
-	 * Persona o NPC.
-	 * @return retorna si se ejecutó correctamente
-	 *  la habilidad.
+	/**
+	 * Sobreescritura del método del padre Casta que permite que un personaje
+	 * caster aplique la habilidad 1 a un peleable que ataca.
+	 * 
+	 * @param caster
+	 *            Personaje atacante.
+	 * @param atacado
+	 *            Personaje que recibirá el ataque.
+	 * @return un booleano: true si el ataque fue realizado exitosamente, false
+	 *         de lo contrario.
 	 */
 	@Override
 	public final boolean habilidad1(final Personaje caster, final Peleable atacado) {
-		if (caster.getEnergia() >= ENERGIAMINIMA) {
-			caster.reducirEnergia(ENERGIAMINIMA);
-			if (atacado.serAtacado(caster.getAtaque() * MULTIPLICADORFUERZA) > 0) {
+		if (caster.getEnergia() >= ENERGIA_MINIMA) {
+			caster.reducirEnergia(ENERGIA_MINIMA);
+			if (atacado.serAtacado(caster.getAtaque() * MULTIPLICADOR_FUERZA) > 0) {
 				return CASTEO_EXITOSO;
 			}
 		}
 		return CASTEO_FALLIDO;
 	}
 
-
-	/** Retorna un booleano.
-	 * Dependiendo de si se
-	 * realizó exitosamente o no el ataque.
-	 * La primera condición para que el ataque
-	 * pueda realizarse es que el atacante(caster) posea 10 o
-	 * más del atributo energia ya que estos se
-	 * descuentan seguido de comprobar que los posee,
-	 *  de lo contrario el ataque no será posible
-	 *   y se retornará false
-	 * @param caster Personaje que realiza el ataque,
-	 * en este caso no es un ataque si no un aumento en
-	 * las caracteristicas del caster en este caso la
-	 * defensa (se agrega a la defensa actual el atributo
-	 * magia)
-	 * @param atacado no cumple función alguna dentro
-	 * de este método
-	 * @return retorna si se ejecutó correctamente la
-	 * habilidad
+	/**
+	 * Sobreescritura del método del padre Casta que permite que un personaje
+	 * caster aplique la habilidad 2 a un peleable que ataca.
+	 * 
+	 * @param caster
+	 *            Personaje atacante.
+	 * @param atacado
+	 *            Personaje que recibirá el ataque.
+	 * @return un booleano: true si el ataque fue realizado exitosamente, false
+	 *         de lo contrario.
 	 */
 	@Override
 	public final boolean habilidad2(final Personaje caster, final Peleable atacado) {
-		if (caster.getEnergia() >= ENERGIAMINIMA) {
-			caster.reducirEnergia(ENERGIAMINIMA);
+		if (caster.getEnergia() >= ENERGIA_MINIMA) {
+			caster.reducirEnergia(ENERGIA_MINIMA);
 			caster.aumentarDefensa(caster.getMagia());
 			return CASTEO_EXITOSO;
 		}
 		return CASTEO_FALLIDO;
 	}
 
-
-	/** Retorna un booleano.
-	 * Dependiendo de si se
-	 * realizó exitosamente o no el ataque.
-	 * La primera condición para que el ataque pueda
-	 * realizarse es que el atacante(caster) posea 10 o
-	 * más del atributo energia ya que estos se
-	 * descuentan seguido de comprobar que los posee,
-	 * de lo contrario el ataque no será posible
-	 * y se retornará false.
-	 * Éste método sólo retornará true si el
-	 * argumento atacado, es una instancia de Personaje.
-	 * @param caster Personaje atacante
-	 * @param atacado Éste argumento debe de ser
-	 * clase atacado para que el método tenga posibilidad
-	 * de retornar true
-	 * @return retorna si se ejecutó correctamente
-	 * la habilidad
+	/**
+	 * Sobreescritura del método del padre Casta que permite que un personaje
+	 * caster aplique la habilidad 3 a un peleable que ataca.
+	 * 
+	 * @param caster
+	 *            Personaje atacante.
+	 * @param atacado
+	 *            Personaje que recibirá el ataque.
+	 * @return un booleano: true si el ataque fue realizado exitosamente, false
+	 *         de lo contrario.
 	 */
 	@Override
 	public final boolean habilidad3(final Personaje caster, final Peleable atacado) {
-		if (caster.getEnergia() >= ENERGIAMINIMA) {
-			caster.reducirEnergia(ENERGIAMINIMA);
+		if (caster.getEnergia() >= ENERGIA_MINIMA) {
+			caster.reducirEnergia(ENERGIA_MINIMA);
 			if (atacado instanceof Personaje) {
 				int defensaOriginal = ((Personaje) atacado).getDefensa();
 				((Personaje) atacado).reducirDefensa(((Personaje) atacado).getDefensa());
@@ -139,52 +116,54 @@ public class Guerrero extends Casta {
 		}
 		return CASTEO_FALLIDO;
 	}
-	/** Retorna un entero.
-	 * Que otorga el bonus de
-	 * fuerza perteneciente a esta casta.
-	 * @return Retorna la fuerza extra de la casta.
+
+	/**
+	 * Getter del bonus de fuerza de la casta
+	 * 
+	 * @return la fuerza extra de la casta.
 	 */
 	@Override
 	public final int recibirFuerzaBonus() {
-		return BONUSFUERZA;
-
+		return BONUS_FUERZA;
 	}
-	/** Retorna un entero que.
-	 * Otorga el bonus de
-	 * destreza perteneciente a esta casta.
-	 * @return Retorna 0 para esta casta.
+
+	/**
+	 * Getter del bonus de destreza de la casta
+	 * 
+	 * @return 0 para esta casta.
 	 */
 	@Override
 	public final int recibirDestrezaBonus() {
-
 		return 0;
 	}
-	/** Retorna un entero.
-	 * Que otorga el bonus de
-	 * inteligencia perteneciente a esta casta.
-	 * @return Retorna 0 para esta casta.
+
+	/**
+	 * Getter del bonus de inteligencia de la casta
+	 * 
+	 * @return 0 para esta casta.
 	 */
 	@Override
 	public final int recibirInteligenciaBonus() {
 		return 0;
 	}
-	/**Retorna una string con el nombre de la casta.
-	 * @return Retorna el nombre de la casta.
+
+	/**
+	 * Getter del nombre de la casta
+	 * 
+	 * @return el nombre de la casta.
 	 */
 	@Override
 	public final String getNombreCasta() {
 		return "Guerrero";
 	}
-	/**Retorna un vector de string.
-	 * Con los nombres
-	 * de las habilidades de la casta.
-	 * @return Retorna nombres de las habilidades
-	 * propias de la casta.
+
+	/**
+	 * Getter de las habilidades propias de la casta
+	 * 
+	 * @return array con los nombres de las habilidades propias de la casta.
 	 */
 	@Override
 	public final String[] getHabilidadesCasta() {
-		return new String[] {"Ataque Doble", "Aumentar Defensa", "Ignorar Defensa"};
+		return new String[] { "Ataque Doble", "Aumentar Defensa", "Ignorar Defensa" };
 	}
 }
-
-

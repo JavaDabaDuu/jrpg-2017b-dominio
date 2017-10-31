@@ -1,158 +1,164 @@
 
 package dominio;
 
-/**La clase Humano hereda de la clase Personaje.
- * Completa ciertos atributos que estaban
- * declarados en la clase Personaje,
- * como por ejemplo habilidadesRaza[]
+/**
+ * La clase Humano es una raza de Personaje. Hereda de la clase Personaje.<br>
+ * Posee dos constructores. El constructor, llama al constructor de la clase
+ * padre (Personaje), pasándole los argumentos recibidos por el constructor
+ * hijo.<br>
+ * Completa ciertos atributos que estaban declarados en la clase Personaje, como
+ * por ejemplo habilidadesRaza[], características particulares de cada raza
  */
+@SuppressWarnings("serial")
 public class Humano extends Personaje {
 	/**
-	 * Energia minima que se necesita para realizar una habilidad.
+	 * Energía mínima que se necesita para realizar una habilidad.
 	 */
-	private static final int ENERGIAMINIMA = 10;
+	private static final int ENERGIA_MINIMA = 10;
 	/**
-	 * Numero por el cual se divide la salud.
+	 * Número por el cual se divide la salud.
 	 */
-	private static final int DIVISORSALUD = 2;
+	private static final int DIVISOR_SALUD = 2;
 	/**
-	 * Numero por el cual se divide la energia.
+	 * Número por el cual se divide la energía.
 	 */
-	private static final int DIVISORENERGIA = 2;
+	private static final int DIVISOR_ENERGIA = 2;
 	/**
-	 * Bonus de energia obtenido por ser de casta Humano.
+	 * Bonus de energía obtenido por ser de raza humano.
 	 */
-	private static final int BONUSENERGIA = 5;
+	private static final int BONUS_ENERGIA = 5;
 	/**
-	 * Bonus de salud obtenido por ser de raza Humano.
+	 * Bonus de salud obtenido por ser de raza humano.
 	 */
-	private static final int BONUSSALUD = 5;
+	private static final int BONUS_SALUD = 5;
 
-	/**La clase Humano hereda de la clase Personaje.
-	 * Completa ciertos atributos que estaban
-	 * declarados en la clase Personaje,
-	 * como por ejemplo habilidadesRaza[]
-	 * @param nombre Indica el nombre el personaje
-	 * @param casta Indica la casta(Raza) del personaje
-	 * @param id Identificador del personaje
+	/**
+	 * Constructor parametrizado reducido de la clase Humano. Instancia un nuevo
+	 * humano invocando al constructor parametrizado de su clase padre
+	 * Personaje.
+	 * 
+	 * @param nombre
+	 *            Indica el nombre del personaje
+	 * @param casta
+	 *            Indica la casta del personaje
+	 * @param id
+	 *            Identificador del personaje
 	 */
 	public Humano(final String nombre, final Casta casta, final int id) {
 		super(nombre, casta, id);
-
-		//POR QUE ACA NO COMPLETA EL ARRAY??
 	}
-	/** La clase Humano hereda de la clase Personaje.
-	 * Completa ciertos atributos que estaban declarados en
-	 * la clase Personaje, como por ejemplo habilidadesRaza[]
-	 * Recibe la mayoría de los atributos
-	 * @param nombre Nombre del personaje
-	 * @param salud Salud del personaje
-	 * @param energia Energia del personaje
-	 * @param fuerza Fuerza del Personaje
-	 * @param destreza Destreza del personaje
-	 * @param inteligencia Inteligencia del personaje
-	 * @param casta Casta(Raza) del personaje
-	 * @param experiencia Experiencia del personaje
-	 * @param nivel Nivel del personaje
-	 * @param idPersonaje Id del personaje
+
+	/**
+	 * Constructor parametrizado extendido de la clase Humano. Instancia un
+	 * nuevo humano invocando al constructor parametrizado de su clase padre
+	 * Personaje.
+	 * 
+	 * @param nombre
+	 *            Nombre del personaje
+	 * @param salud
+	 *            Salud del personaje
+	 * @param energia
+	 *            Energía del personaje
+	 * @param fuerza
+	 *            Fuerza del Personaje
+	 * @param destreza
+	 *            Destreza del personaje
+	 * @param inteligencia
+	 *            Inteligencia del personaje
+	 * @param casta
+	 *            Casta(Raza) del personaje
+	 * @param experiencia
+	 *            Experiencia del personaje
+	 * @param nivel
+	 *            Nivel del personaje
+	 * @param idPersonaje
+	 *            Id del personaje
 	 */
-	public Humano(final String nombre, final int salud, final int energia, final int fuerza,
-			final int destreza, final int inteligencia, final Casta casta,
-			final int experiencia, final int nivel, final int idPersonaje) {
+	public Humano(final String nombre, final int salud, final int energia, final int fuerza, final int destreza,
+			final int inteligencia, final Casta casta, final int experiencia, final int nivel, final int idPersonaje) {
 		super(nombre, salud, energia, fuerza, destreza, inteligencia, casta, experiencia, nivel, idPersonaje);
 	}
 
-
-	/** Retorna un booleano dependiendo de si se
-	 * realizó exitosamente o no el ataque.
-	 * La primera condición para que el ataque
-	 * pueda realizarse es que el atacante(caster) posea 10 o
-	 * más del atributo energia ya que estos se
-	 * descuentan seguido de comprobar que los posee,
-	 * de lo contrario el ataque no será posible
-	 * y se retornará false
-	 * El método serAtacado() tiene como argumento
-	 * la suma del valor del atributo ataque
-	 * y magia del llamador.
-	 * @param atacado Instancia de Personaje o de NPC,
-	 * dependiendo de cual sea, será como responda el
-	 * método serAtacado()
-	 * @return booleano que determina si el ataque fue exitoso o no.
+	/**
+	 * Sobreescritura del método del padre Personaje que permite que un
+	 * personaje caster aplique la habilidad de raza 1 a un peleable que
+	 * atacado.
+	 * 
+	 * @param atacado
+	 *            Personaje que recibirá el ataque.
+	 * @return un booleano: true si el ataque fue realizado exitosamente, false
+	 *         de lo contrario.
 	 */
 	@Override
 	public final boolean habilidadRaza1(final Peleable atacado) {
-		if (this.getEnergia() >= ENERGIAMINIMA) {
-			this.reducirEnergia(ENERGIAMINIMA);
+		if (this.getEnergia() >= ENERGIA_MINIMA) {
+			this.reducirEnergia(ENERGIA_MINIMA);
 			atacado.setAtaque(atacado.getAtaque() + this.getMagia());
 			return true;
 		}
 		return false;
 	}
 
-
-	/** Retorna un booleano dependiendo de si se
-	 * realizó exitosamente o no el ataque.
-	 * La primera condición para que el ataque
-	 * pueda realizarse es que el atacante(caster) posea 10 o
-	 * más del atributo energia ya que estos se
-	 * descuentan seguido de comprobar que los posee,
-	 * de lo contrario el ataque no será posible y
-	 * se retornará false
-	 * El método serAtacado() recibe como parámetro
-	 * la mitad del valor de la salud del atacado,
-	 * si el valor retornado es mayor a 0, el valor
-	 * del atributo energia del llamador será
-	 * reducido a la mitad.
-	 * @param atacado Instancia de Personaje o de NPC,
-	 * dependiendo de cual sea, será como responda el
-	 * método serAtacado()
-	 * @return booleano que determina si el ataque fue exitoso o no.
+	/**
+	 * Sobreescritura del método del padre Personaje que permite que un
+	 * personaje caster aplique la habilidad de raza 2 a un peleable que
+	 * atacado.
+	 * 
+	 * @param atacado
+	 *            Personaje que recibirá el ataque.
+	 * @return un booleano: true si el ataque fue realizado exitosamente, false
+	 *         de lo contrario.
 	 */
 	@Override
 	public final boolean habilidadRaza2(final Peleable atacado) {
-		if (this.getEnergia() >= ENERGIAMINIMA) {
-			if (atacado.serAtacado(atacado.getSalud() / DIVISORSALUD) > 0) {
-				this.reducirEnergia(this.getEnergia() / DIVISORENERGIA);
+		if (this.getEnergia() >= ENERGIA_MINIMA) {
+			if (atacado.serAtacado(atacado.getSalud() / DIVISOR_SALUD) > 0) {
+				this.reducirEnergia(this.getEnergia() / DIVISOR_ENERGIA);
 				return true;
 			}
 		}
-		this.reducirEnergia(ENERGIAMINIMA);
+		this.reducirEnergia(ENERGIA_MINIMA);
 		return false;
 	}
-	/**Retorna un vector de string con los nombres
-	 * de las habilidades de la raza.
-	 * @return Retorna nombres de las habilidades
-	 * propias de la raza.
+
+	/**
+	 * Getter de las habilidades propias de la raza
+	 * 
+	 * @return array con los nombres de las habilidades propias de la raza
 	 */
 	@Override
 	public final String[] getHabilidadesRaza() {
-		return new String[] {"Incentivar", "Golpe Fatal"};
+		return new String[] { "Incentivar", "Golpe Fatal" };
 	}
-	/**Retorna un entero con el bonificador de salud
-	 * de la raza.
-	 * @return Retorna la salud extra de la raza.
+
+	/**
+	 * Getter del bonus de salud de la raza
+	 * 
+	 * @return la salud extra de la raza
 	 */
 	@Override
 	public final int getSaludBonus() {
-		return BONUSSALUD;
+		return BONUS_SALUD;
 	}
-	/**Retorna un entero con el bonificador de energia
-	 * de la raza.
-	 * @return Retorna la energia extra para esta raza.
+
+	/**
+	 * Getter del bonus de energía de la raza
+	 * 
+	 * @return la energía extra de la raza
 	 */
 	@Override
 	public final int getEnergiaBonus() {
-		return BONUSENERGIA;
+		return BONUS_ENERGIA;
 	}
-	/**Retorna una string con el nombre de la raza.
-	 * @return Retorna el nombre de la raza.
+
+	/**
+	 * Getter del nombre de la raza
+	 * 
+	 * @return el nombre de la raza
 	 */
 	@Override
 	public final String getNombreRaza() {
 		return "Humano";
 	}
-
-
-
 
 }

@@ -64,9 +64,9 @@ public class TestPersonajeNuevo {
 	public void testSerDesenergizado() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);
 		// No le hace nada porque al defensa es mayor al dano
-		Assert.assertEquals(0, p1.serDesernegizado(3));
+		Assert.assertEquals(0, p1.serDesenergizado(3));
 		// 105 de energia + 15 de defensa = 130
-		Assert.assertEquals(105, p1.serDesernegizado(130));
+		Assert.assertEquals(105, p1.serDesenergizado(130));
 		Assert.assertEquals(0, p1.getEnergia());
 	}
 	

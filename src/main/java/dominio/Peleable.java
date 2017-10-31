@@ -1,77 +1,81 @@
 
 package dominio;
 
-/** Interface implementada en las clases Personaje
- * y NPC.
- * Dependiendo qué clase las esté implementando
- * será como responderán
+/**
+ * La interfaz Peleable define los comportamientos que debe tener quien sea
+ * peleable.
  */
 public interface Peleable {
 	/**
-	 * Metodo implementado en Personaje
-	 * y en NonPlayableCharacter.
+	 * Metodo que permite recibir un daño al ser atacado.
 	 *
-	 * @param daño Valor el cual se descontará de la defensa.
-	 * @return Retorna un entero con el daño causado al llamador.
+	 * @param danio
+	 *            es el daño recibido en un ataque.
+	 * @return el daño que se efectúa sobre el peleable.
 	 */
-	int serAtacado(int daño);
+	int serAtacado(int danio);
 
 	/**
-	 * Metodo implementado en Personaje
-	 * y NonPlayableCharacter.
+	 * Getter de la salud del peleable.
 	 *
-	 * @return Retornara un entero con la salud del llamador.
+	 * @return la salud del peleable.
 	 */
 	int getSalud();
+
 	/**
-	 * Metodo implementado en Personaje
-	 * y NonPlayableCharacter.
+	 * Getter de la magia del peleable.
 	 *
-	 * @return Retornara un entero con la energia del llamador.
+	 * @return la magia del peleable.
 	 */
 	int getMagia();
+
 	/**
-	 * Metodo void implementado en Personaje
-	 * y NonPlayableCharacter.
+	 * Acción desencadenada tras jugar un turno.
 	 */
 	void despuesDeTurno();
+
 	/**
-	 * Metodo implementado en Personaje
-	 * y NonPlayableCharacter.
-	 * @param atacado Personaje al cual el llamador atacara.
-	 * @return Retorna el daño causado del atacante al atacado.
+	 * Método que permite atacar a un peleable.
+	 * 
+	 * @param atacado
+	 *            es el peleableque es atacado.
+	 * @return daño causado al peleable atacado.
 	 */
 	int atacar(Peleable atacado);
+
 	/**
-	 * Metodo implementado en Personaje
-	 * y NonPlayableCharacter.
-	 * @return Retorna el nivel del llamador multiplicado por la
-	 * constante MULTIPLICADOREXP.
+	 * Método que indica la experiencia que se puede otorgar.
+	 * 
+	 * @return la experiencia a otorgar.
 	 */
 	int otorgarExp();
+
 	/**
-	 * Metodo implementado en Personaje
-	 * y NonPlayableCharacter.
-	 * @return Retorna un entero con el ataque del llamador.
+	 * Getter del ataque del peleable.
+	 * 
+	 * @return el ataque del peleable.
 	 */
 	int getAtaque();
+
 	/**
-	 * Metodo implementado en Personaje
-	 * y NonPlayableCharacter.
-	 * @param ataque Entero que será el nuevo ataque del llamador.
+	 * Getter del ataque del peleable.
+	 * 
+	 * @param ataque
+	 *            es el ataque ganado por el personaje.
 	 */
 	void setAtaque(int ataque);
+
 	/**
-	 * Metodo implementado en Personaje
-	 * y NonPlayableCharacter.
+	 * Método que indica si el peleable está vivo.
 	 *
-	 * @return Retorna un boolean si esta vivo o no el llamador.
+	 * @return un booleano que indica si el peleable tiene vida.
 	 */
 	boolean estaVivo();
+
 	/**
-	 * Método.
-	 * @return retorna el nombre del Personaje o NPC.
+	 * Getter del nombre del peleable.
+	 * 
+	 * @return el nombre del peleable.
 	 */
 	String getNombre();
 }
-

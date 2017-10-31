@@ -1,41 +1,51 @@
 package dominio;
+
 /**
- * Clase con proposito de testing ya que se fijan sus valores.
+ * La clase MyRandomStub es la encargada de relizar el testing
  */
 public class MyRandomStub extends RandomGenerator {
 	/**
-	 * Valor que devolverá nextDouble().
+	 * Valor double que se retornará.
 	 */
 	private final double valDouble;
 	/**
-	 * Valor que devolverá nextInt();
+	 * Valor entero que se retornará.
 	 */
 	private final int valInt;
+
 	/**
 	 * Constructor del MyRandomStub.
-	 * @param valDouble Double que se fijará en el objeto.
-	 * @param valInt Entero que se fijará en el objeto.
+	 * 
+	 * @param valDouble
+	 *            es el valor double que se fijará en el objeto.
+	 * @param valInt
+	 *            esel valor entero que se fijará en el objeto.
 	 */
 	public MyRandomStub(final double valDouble, final int valInt) {
 		this.valDouble = valDouble;
 		this.valInt = valInt;
 	}
+
 	/**
-	 * Método que retorna el valor entero que se pasa en el constructor.
-	 * @param val valor que se pasa por parametro.
-	 * @return Entero que se pasa por parametro en el constructor.
+	 * Método que retorna el valor entero del stub
+	 * 
+	 * @param val
+	 *            valor que se pasa por parámetro.
+	 * @return el valor entero del stub
 	 */
 	@Override
 	public final int nextInt(final int val) {
-		return valInt;
+		return this.valInt;
 	}
+
 	/**
-	 * Método que retorna el valor entero que se pasa en el constructor.
-	 * @return Double que se pasa por parametro en el constructor.
+	 * Método que retorna el valor double del stub
+	 * 
+	 * @return el valor double del stub
 	 */
 	@Override
 	public final double nextDouble() {
-		return valDouble;
+		return this.valDouble;
 	}
 
 }

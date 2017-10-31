@@ -2,59 +2,66 @@
 package dominio;
 
 import java.util.LinkedList;
-/**La clase Alianza tiene como función agrupar a los jugadores.
- * mediante una LinkedList de Personajes
+
+/**
+ * La clase Alianza agrupa a los jugadores que forman una alianza.
  */
 public class Alianza {
 	/**
-	 * Nombre que tendra la alianza.
+	 * Nombre de la alianza.
 	 */
 	private final String nombre;
 	/**
-	 * Lista la cual contendra todos los integrantes de la alianza.
+	 * Lista de integrantes que están aliados a la alianza.
 	 */
 	private LinkedList<Personaje> aliados;
 
-	/**La clase Alianza tiene como función agrupar a los jugadores.
-	 * mediante una LinkedList de Personajes
-	 * @param nombre Nombre que se le dará a la alianza
+	/**
+	 * Constructor parametrizado de la clase Alianza
+	 * 
+	 * @param nombre
+	 *            es el nombre de la alianzq.
 	 */
 	public Alianza(final String nombre) {
 		this.nombre = nombre;
 		this.aliados = new LinkedList<Personaje>();
 	}
-	/** Se encarga de retornar la lista.
-	 * Que contiene los personajes
-	 * pertenecientes a la alianza.
-	 * @return Retorna la lista de aliados.
+
+	/**
+	 * Getter de la lista de personajes aliados a la alianza.
+	 * 
+	 * @return la lista de aliados a la alianza.
 	 */
 	public final LinkedList<Personaje> getAliados() {
-		return new LinkedList<Personaje>(aliados);
+		return new LinkedList<Personaje>(this.aliados);
 	}
 
-
-	/** Se encarga de retornar
-	 * el nombre de la alianza.
-	 * @return Retorna nombre de la alianza.
+	/**
+	 * Getter del nombre de la alianza.
+	 * 
+	 * @return el nombre de la alianza.
 	 */
 	public final String obtenerNombre() {
-		return nombre;
-	}
-	/** Se encarga de eliminar un
-	 * personaje de la alianza.
-	 * @param pj personaje a remover
-	 * de la alianza.
-	 */
-	public final void eliminarPersonaje(final Personaje pj) {
-		aliados.remove(pj);
+		return this.nombre;
 	}
 
-	/**Método void que agrega un nuevo Personaje a la LinkedList aliados.
-	 * Utilizando el método add() de la LinkedList
-	 * @param pj Personaje a agregarse a la lista de aliados
+	/**
+	 * Método que elimina un personaje de la alianza.
+	 * 
+	 * @param personaje
+	 *            es el personaje a remover de la lista de aliados.
 	 */
-	public final void añadirPersonaje(final Personaje pj) {
-		aliados.add(pj);
+	public final void eliminarPersonaje(final Personaje personaje) {
+		this.aliados.remove(personaje);
+	}
+
+	/**
+	 * Método que agrega un personaje a la alianza.
+	 * 
+	 * @param personaje
+	 *            es el personaje a agregar a la lista de aliados.
+	 */
+	public final void añadirPersonaje(final Personaje personaje) {
+		this.aliados.add(personaje);
 	}
 }
-
