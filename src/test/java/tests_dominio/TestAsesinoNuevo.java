@@ -8,8 +8,15 @@ import dominio.Humano;
 import dominio.MyRandomStub;
 import dominio.Personaje;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestAsesinoNuevo.
+ */
 public class TestAsesinoNuevo {
 
+	/**
+	 * Test habilidad 1.
+	 */
 	@Test
 	public void testHabilidad1() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);
@@ -20,6 +27,9 @@ public class TestAsesinoNuevo {
 		Assert.assertFalse(p1.habilidadCasta1(p2));
 	}
 	
+	/**
+	 * Test habilidad 1 S.
+	 */
 	@Test
 	public void testHabilidad1S() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);
@@ -30,6 +40,9 @@ public class TestAsesinoNuevo {
 		Assert.assertFalse(p1.habilidadCasta1(p2));
 	}
 	
+	/**
+	 * Test habilidad 2.
+	 */
 	@Test
 	public void testHabilidad2() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);
@@ -40,6 +53,9 @@ public class TestAsesinoNuevo {
 		Assert.assertFalse(p1.habilidadCasta2(p2));
 	}
 	
+	/**
+	 * Test habilidad 3.
+	 */
 	@Test
 	public void testHabilidad3() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);

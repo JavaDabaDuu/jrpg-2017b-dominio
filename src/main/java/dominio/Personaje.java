@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import javax.swing.DefaultListModel;
 
+// TODO: Auto-generated Javadoc
 /**
  * La clase personaje representa a los personajes del juego que son manejados
  * por humanos.<br>
@@ -114,10 +115,8 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	 * Energia mínima necesaria para poder realizar una habilidad.
 	 */
 	private static final int ENERGIA_MINIMA = 10;
-	/**
-	 * Número por el cual se divide la destreza del personaje para calcular la
-	 * posibilidad de evitar el daño
-	 */
+	
+	/** Número por el cual se divide la destreza del personaje para calcular la posibilidad de evitar el daño. */
 	private static final int DIVISOR_DESTREZA = 1000;
 	/**
 	 * Posición inicial del Personaje en eje X.
@@ -369,8 +368,8 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	}
 
 	/**
-	 * Getter de la salud del personaje
-	 * 
+	 * Getter de la salud del personaje.
+	 *
 	 * @return Salud del personaje
 	 */
 	@Override
@@ -433,8 +432,8 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	}
 
 	/**
-	 * Getter del tope de salud del personaje
-	 * 
+	 * Getter del tope de salud del personaje.
+	 *
 	 * @return el tope de salud del personaje
 	 */
 	public final int getSaludTope() {
@@ -541,7 +540,7 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**
 	 * Metodo que establece la salud actual del personaje a la máxima salud
-	 * posible
+	 * posible.
 	 */
 	public final void restablecerSalud() {
 		this.salud = this.saludTope;
@@ -549,7 +548,7 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**
 	 * Metodo que establece la energía actual del personaje a la máxima energía
-	 * posible
+	 * posible.
 	 */
 	public final void restablecerEnergia() {
 		this.energia = this.energiaTope;
@@ -607,10 +606,9 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**
 	 * Método que calcula y quita los puntos de salud que fueron robados al
-	 * recibir un daño
-	 * 
-	 * @param danio
-	 *            es el daño causado al personaje
+	 * recibir un daño.
+	 *
+	 * @param danio            es el daño causado al personaje
 	 * @return los puntos de vida quitados al personaje
 	 */
 	public final int serRobadoSalud(int danio) {
@@ -629,10 +627,9 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**
 	 * Método que calcula y quita los puntos de energia que fueron perdidos al
-	 * recibir un daño
-	 * 
-	 * @param danio
-	 *            es el daño causado al personaje
+	 * recibir un daño.
+	 *
+	 * @param danio            es el daño causado al personaje
 	 * @return los puntos de energia quitados al personaje.
 	 */
 	public final int serDesenergizado(int danio) {
@@ -813,10 +810,9 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**
 	 * Método que clona un personaje.
-	 * 
-	 * @throws CloneNotSupportedException
-	 *             Excepción de clonación cuando no está implementada
+	 *
 	 * @return un clon con atributos copia fiel del personaje clonado.
+	 * @throws CloneNotSupportedException             Excepción de clonación cuando no está implementada
 	 */
 	@Override
 	public Object clone() throws CloneNotSupportedException {
@@ -946,20 +942,18 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**
 	 * Método que aumenta la inteligencia del personaje según la cantidad
-	 * otorgada
-	 * 
-	 * @param bonus
-	 *            es la inteligencia otorgada
+	 * otorgada.
+	 *
+	 * @param bonus            es la inteligencia otorgada
 	 */
 	public final void aumentarInteligencia(final int bonus) {
 		this.inteligencia += bonus;
 	}
 
 	/**
-	 * Método que aumenta la destreza del personaje según la cantidad otorgada
-	 * 
-	 * @param bonus
-	 *            es la destreza otorgada
+	 * Método que aumenta la destreza del personaje según la cantidad otorgada.
+	 *
+	 * @param bonus            es la destreza otorgada
 	 */
 	public final void aumentarDestreza(final int bonus) {
 		this.destreza += bonus;
@@ -967,10 +961,9 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**
 	 * Método que aumenta el tope de salud del personaje según la cantidad
-	 * otorgada
-	 * 
-	 * @param bonus
-	 *            es la salud otorgada
+	 * otorgada.
+	 *
+	 * @param bonus            es la salud otorgada
 	 */
 	public final void aumentarSaludTope(final int bonus) {
 		this.saludTope += bonus;
@@ -978,10 +971,9 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 
 	/**
 	 * Método que aumenta el tope de energía del personaje según la cantidad
-	 * otorgada
-	 * 
-	 * @param bonus
-	 *            es la energía otorgada
+	 * otorgada.
+	 *
+	 * @param bonus            es la energía otorgada
 	 */
 	public final void aumentarEnergiaTope(final int bonus) {
 		this.energiaTope += bonus;
@@ -997,10 +989,9 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	}
 
 	/**
-	 * Setter de la tabla de niveles del personaje
-	 * 
-	 * @param tablaDeNiveles
-	 *            es la nueva tabla de niveles de personaje.
+	 * Setter de la tabla de niveles del personaje.
+	 *
+	 * @param tablaDeNiveles            es la nueva tabla de niveles de personaje.
 	 */
 	private static void setTablaDeNiveles(final int[] tablaDeNiveles) {
 		Personaje.tablaDeNiveles = tablaDeNiveles;
@@ -1065,14 +1056,11 @@ public abstract class Personaje extends MadreDeTodo implements Peleable, Seriali
 	}
 
 	/**
-	 * Método que realiza el trueque de ítems
-	 * 
-	 * @param misItems
-	 *            son los ítems que posee el personaje actualmente.
-	 * @param aPoner
-	 *            son los ítems a recibir
-	 * @param aSacar
-	 *            son los ítems a sacar
+	 * Método que realiza el trueque de ítems.
+	 *
+	 * @param misItems            son los ítems que posee el personaje actualmente.
+	 * @param aPoner            son los ítems a recibir
+	 * @param aSacar            son los ítems a sacar
 	 */
 	public void trueque(final ArrayList<Item> misItems, final ArrayList<Item> aPoner,
 			final DefaultListModel<String> aSacar) {

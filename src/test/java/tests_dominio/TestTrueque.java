@@ -16,8 +16,15 @@ import dominio.Personaje;
 
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestTrueque.
+ */
 public class TestTrueque {
 
+	/**
+	 * Test trueque.
+	 */
 	@Test
 	public void testTrueque() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);
@@ -50,6 +57,9 @@ public class TestTrueque {
 		
 	}
 	
+	/**
+	 * Test trueque 2.
+	 */
 	@Test
 	public void testTrueque2() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);

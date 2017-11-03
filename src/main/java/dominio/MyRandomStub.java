@@ -1,7 +1,8 @@
 package dominio;
 
+// TODO: Auto-generated Javadoc
 /**
- * La clase MyRandomStub es la encargada de relizar el testing
+ * La clase MyRandomStub es la encargada de relizar el testing.
  */
 public class MyRandomStub extends RandomGenerator {
 	/**
@@ -27,10 +28,9 @@ public class MyRandomStub extends RandomGenerator {
 	}
 
 	/**
-	 * Método que retorna el valor entero del stub
-	 * 
-	 * @param val
-	 *            valor que se pasa por parámetro.
+	 * Método que retorna el valor entero del stub.
+	 *
+	 * @param val            valor que se pasa por parámetro.
 	 * @return el valor entero del stub
 	 */
 	@Override
@@ -39,8 +39,8 @@ public class MyRandomStub extends RandomGenerator {
 	}
 
 	/**
-	 * Método que retorna el valor double del stub
-	 * 
+	 * Método que retorna el valor double del stub.
+	 *
 	 * @return el valor double del stub
 	 */
 	@Override

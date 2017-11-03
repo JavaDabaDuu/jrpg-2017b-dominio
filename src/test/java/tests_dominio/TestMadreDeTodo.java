@@ -8,9 +8,16 @@ import dominio.Humano;
 import dominio.Personaje;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestMadreDeTodo.
+ */
 public class TestMadreDeTodo {
 
 	
+	/**
+	 * Test set nombre.
+	 */
 	@Test
 	public void testSetNombre() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);

@@ -5,8 +5,15 @@ import org.junit.Test;
 
 import dominio.*;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestPersonaje.
+ */
 public class TestPersonaje {
 
+	/**
+	 * Test humano.
+	 */
 	@Test
 	public void testHumano() {
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);
@@ -31,6 +38,9 @@ public class TestPersonaje {
 		Assert.assertTrue(h3.getInteligencia() == 10);
 	}
 
+	/**
+	 * Test elfo.
+	 */
 	@Test
 	public void testElfo() {
 		Elfo e = new Elfo("Nicolas", new Guerrero(), 1);
@@ -55,6 +65,9 @@ public class TestPersonaje {
 		Assert.assertTrue(e3.getInteligencia() == 10);
 	}
 
+	/**
+	 * Test orco.
+	 */
 	@Test
 	public void testOrco() {
 		Orco o = new Orco("Nicolas", new Guerrero(), 1);

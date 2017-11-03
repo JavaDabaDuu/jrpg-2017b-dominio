@@ -9,8 +9,15 @@ import dominio.Hechicero;
 import dominio.Humano;
 import dominio.MyRandomStub;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestHechicero.
+ */
 public class TestHechicero {
 
+	/**
+	 * Test curar.
+	 */
 	@Test
 	public void testCurar() {
 		Humano h = new Humano("Nico", 100, 100, 55, 20, 30, new Hechicero(0.2, 0.3, 1.5), 0, 1, 1);
@@ -24,6 +31,9 @@ public class TestHechicero {
 		Assert.assertTrue(e.getSalud() > 65);
 	}
 
+	/**
+	 * Test bola de fuego.
+	 */
 	@Test
 	public void testBolaDeFuego() {
 		Humano h = new Humano("Nico", 100, 100, 55, 20, 30, new Hechicero(0.2, 0.3, 1.5), 0, 1, 1);
@@ -37,6 +47,9 @@ public class TestHechicero {
 			Assert.assertTrue(e.getSalud() == 100);
 	}
 
+	/**
+	 * Test robar energia y salud.
+	 */
 	@Test
 	public void testRobarEnergia_y_Salud() {
 		Humano h = new Humano("Nico", 100, 100, 55, 20, 50, new Hechicero(0.2, 0.3, 1.5), 0, 1, 1);

@@ -5,8 +5,15 @@ import org.junit.Test;
 
 import dominio.*;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestSubirNivel.
+ */
 public class TestSubirNivel {
 
+	/**
+	 * Test subirde nivel.
+	 */
 	@Test
 	public void testSubirdeNivel() {
 		Personaje.cargarTablaNivel();
@@ -16,6 +23,9 @@ public class TestSubirNivel {
 		Assert.assertTrue(h.getNivel() == 2);
 	}
 
+	/**
+	 * Test nivel 100.
+	 */
 	@Test
 	public void testNivel100() {
 		Personaje.cargarTablaNivel();
@@ -27,6 +37,9 @@ public class TestSubirNivel {
 
 	}
 
+	/**
+	 * Test ganar mucha exp.
+	 */
 	@Test
 	public void testGanarMuchaExp() {
 		Personaje.cargarTablaNivel();

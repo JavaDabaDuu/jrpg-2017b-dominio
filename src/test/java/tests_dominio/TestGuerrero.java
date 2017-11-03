@@ -9,8 +9,15 @@ import dominio.Guerrero;
 import dominio.Humano;
 import dominio.MyRandomStub;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestGuerrero.
+ */
 public class TestGuerrero {
 
+	/**
+	 * Test doble golpe.
+	 */
 	@Test
 	public void testDobleGolpe() {
 		Humano h = new Humano("Nico", 100, 100, 25, 20, 30, new Guerrero(0.2, 0.3, 1.5), 0, 1, 1);
@@ -25,6 +32,9 @@ public class TestGuerrero {
 			Assert.assertTrue(e.getSalud() == 100);
 	}
 
+	/**
+	 * Test auto defensa.
+	 */
 	@Test
 	public void testAutoDefensa() {
 		Humano h = new Humano("Nico", 100, 100, 25, 20, 30, new Guerrero(0.2, 0.3, 1.5), 0, 1, 1);
@@ -34,6 +44,9 @@ public class TestGuerrero {
 		Assert.assertTrue(h.getDefensa() == 65);
 	}
 
+	/**
+	 * Test ignora defensa.
+	 */
 	@Test
 	public void testIgnoraDefensa() {
 		Humano h = new Humano("Nico", 100, 100, 25, 20, 30, new Guerrero(0.2, 0.3, 1.5), 0, 1, 1);

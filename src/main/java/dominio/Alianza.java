@@ -3,6 +3,7 @@ package dominio;
 
 import java.util.LinkedList;
 
+// TODO: Auto-generated Javadoc
 /**
  * La clase Alianza agrupa a los jugadores que forman una alianza.
  */
@@ -17,10 +18,9 @@ public class Alianza {
 	private LinkedList<Personaje> aliados;
 
 	/**
-	 * Constructor parametrizado de la clase Alianza
-	 * 
-	 * @param nombre
-	 *            es el nombre de la alianzq.
+	 * Constructor parametrizado de la clase Alianza.
+	 *
+	 * @param nombre            es el nombre de la alianzq.
 	 */
 	public Alianza(final String nombre) {
 		this.nombre = nombre;

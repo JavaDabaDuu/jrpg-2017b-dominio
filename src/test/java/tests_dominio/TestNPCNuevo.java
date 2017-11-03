@@ -9,8 +9,15 @@ import dominio.MyRandomStub;
 import dominio.NonPlayableCharacter;
 import dominio.Personaje;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestNPCNuevo.
+ */
 public class TestNPCNuevo {
 
+	/**
+	 * Test nivel NPC 1.
+	 */
 	@Test
 	public void testNivelNPC1() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Pepe", 1, 1);
@@ -19,18 +26,27 @@ public class TestNPCNuevo {
 		Assert.assertEquals(60, npc.getSalud());
 	}
 
+	/**
+	 * Test daño menor A def.
+	 */
 	@Test
 	public void testDañoMenorADef() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Pepe", 1, 1);
 		Assert.assertEquals(0, npc.serAtacado(1));
 	}
 	
+	/**
+	 * Test get fuerza.
+	 */
 	@Test
 	public void testGetFuerza() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Pepe", 1, 1);
 		Assert.assertEquals(20, npc.getFuerza());
 	}
 	
+	/**
+	 * Test set ataque.
+	 */
 	@Test
 	public void testSetAtaque() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Pepe", 1, 1);
@@ -39,12 +55,18 @@ public class TestNPCNuevo {
 		Assert.assertEquals(80, npc.getFuerza());
 	}
 	
+	/**
+	 * Test get magia.
+	 */
 	@Test
 	public void testGetMagia() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Pepe", 1, 1);
 		Assert.assertEquals(0, npc.getMagia());
 	}
 	
+	/**
+	 * Test atacar.
+	 */
 	@Test
 	public void testAtacar() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Pepe", 1, 1);
@@ -60,6 +82,9 @@ public class TestNPCNuevo {
 		Assert.assertEquals(5, npc.atacar(p1));
 	}
 	
+	/**
+	 * Test set salud.
+	 */
 	@Test
 	public void testSetSalud() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Pepe", 1, 1);
@@ -67,6 +92,9 @@ public class TestNPCNuevo {
 		Assert.assertEquals(80, npc.getSalud());
 	}
 	
+	/**
+	 * Test nivel NPC default.
+	 */
 	@Test
 	public void testNivelNPCDefault() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Pepe", 1, 9);
@@ -75,6 +103,9 @@ public class TestNPCNuevo {
 		Assert.assertEquals(300, npc.getSalud());
 	}
 	
+	/**
+	 * Test nivel 3 NPC.
+	 */
 	@Test
 	public void testNivel3NPC() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Pepe", 1, 2);
@@ -83,6 +114,9 @@ public class TestNPCNuevo {
 		Assert.assertEquals(30, npc.getFuerza());
 	}
 
+	/**
+	 * Test atacar 2.
+	 */
 	@Test
 	public void testAtacar2() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Pepe", 1, 1);

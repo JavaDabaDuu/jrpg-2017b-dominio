@@ -1,7 +1,8 @@
 package dominio;
 
+// TODO: Auto-generated Javadoc
 /**
- * La clase RandomGenerator genera números random
+ * La clase RandomGenerator genera números random.
  */
 public class RandomGenerator {
 	/**
@@ -27,7 +28,7 @@ public class RandomGenerator {
 	}
 
 	/**
-	 * Constructor de la clase RandomGenerator
+	 * Constructor de la clase RandomGenerator.
 	 */
 	public RandomGenerator() {
 

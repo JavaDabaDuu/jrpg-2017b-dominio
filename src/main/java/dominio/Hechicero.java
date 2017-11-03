@@ -1,6 +1,7 @@
 
 package dominio;
 
+// TODO: Auto-generated Javadoc
 /**
  * La clase Hechicero es una casta de Personaje. Hereda de la clase Casta. posee
  * dos constructores. El constructor, llama al constructor de la clase padre
@@ -76,11 +77,9 @@ public class Hechicero extends Casta {
 	/**
 	 * Sobreescritura del método del padre Casta que permite que un personaje
 	 * caster aplique la habilidad 2 a un peleable que ataca.
-	 * 
-	 * @param caster
-	 *            Personaje atacante.
-	 * @param atacado
-	 *            Personaje que recibirá el ataque.
+	 *
+	 * @param caster            Personaje atacante.
+	 * @param aliado the aliado
 	 * @return un booleano: true si el ataque fue realizado exitosamente, false
 	 *         de lo contrario.
 	 */
@@ -125,8 +124,8 @@ public class Hechicero extends Casta {
 	}
 
 	/**
-	 * Getter del bonus de inteligencia de la casta
-	 * 
+	 * Getter del bonus de inteligencia de la casta.
+	 *
 	 * @return la inteligencia extra de la casta
 	 */
 	@Override
@@ -135,8 +134,8 @@ public class Hechicero extends Casta {
 	}
 
 	/**
-	 * Getter del bonus de destreza de la casta
-	 * 
+	 * Getter del bonus de destreza de la casta.
+	 *
 	 * @return 0 para esta casta.
 	 */
 	@Override
@@ -145,8 +144,8 @@ public class Hechicero extends Casta {
 	}
 
 	/**
-	 * Getter del bonus de fuerza de la casta
-	 * 
+	 * Getter del bonus de fuerza de la casta.
+	 *
 	 * @return 0 para esta casta
 	 */
 	@Override
@@ -155,8 +154,8 @@ public class Hechicero extends Casta {
 	}
 
 	/**
-	 * Getter del nombre de la casta
-	 * 
+	 * Getter del nombre de la casta.
+	 *
 	 * @return el nombre de la casta.
 	 */
 	@Override
@@ -165,8 +164,8 @@ public class Hechicero extends Casta {
 	}
 
 	/**
-	 * Getter de las habilidades propias de la casta
-	 * 
+	 * Getter de las habilidades propias de la casta.
+	 *
 	 * @return array con los nombres de las habilidades propias de la casta.
 	 */
 	@Override

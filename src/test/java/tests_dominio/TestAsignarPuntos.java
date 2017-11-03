@@ -7,8 +7,15 @@ import dominio.Guerrero;
 import dominio.Humano;
 import dominio.Personaje;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestAsignarPuntos.
+ */
 public class TestAsignarPuntos {
 
+	/**
+	 * Test aumentar salud tope.
+	 */
 	@Test
 	public void testAumentarSalud_tope(){
 		Personaje.cargarTablaNivel();
@@ -19,6 +26,9 @@ public class TestAsignarPuntos {
 		Assert.assertTrue(h.getSaludTope()==130);
 		}
 	
+	/**
+	 * Test aumentar energia tope.
+	 */
 	@Test
 	public void testAumentarEnergia_tope(){
 		Personaje.cargarTablaNivel();
@@ -29,6 +39,9 @@ public class TestAsignarPuntos {
 		Assert.assertTrue(h.getEnergiaTope()==125);
 	}
 	
+	/**
+	 * Test mas de 200 puntos.
+	 */
 	@Test
 	public void testMasDe200Puntos(){
 		Humano h = new Humano("Nicolas",new Guerrero(),1);

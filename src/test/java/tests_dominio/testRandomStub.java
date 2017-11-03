@@ -6,8 +6,15 @@ import org.junit.Test;
 import dominio.MyRandomStub;
 import dominio.RandomGenerator;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class testRandomStub.
+ */
 public class testRandomStub {
 
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		RandomGenerator ran = new MyRandomStub(3,2);

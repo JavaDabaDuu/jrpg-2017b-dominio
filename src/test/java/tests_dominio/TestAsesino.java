@@ -8,11 +8,21 @@ import dominio.Hechicero;
 import dominio.Humano;
 import dominio.MyRandomStub;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestAsesino.
+ */
 public class TestAsesino {
 
+	/**
+	 * Test robar.
+	 */
 	@Test
 	public void testRobar(){ }
 	
+	/**
+	 * Test critico.
+	 */
 	@Test
 	public void testCritico(){
 		Humano h = new Humano("Nicolas",new Asesino(),1);
@@ -26,6 +36,9 @@ public class TestAsesino {
 			Assert.assertEquals(105, h2.getSalud());
 	}
 	
+	/**
+	 * Test prob evasion.
+	 */
 	@Test
 	public void testProbEvasion(){
 		Humano h = new Humano("Nico",100, 100, 25, 20, 30, new Asesino(0.2, 0.3, 1.5), 0, 1, 1);

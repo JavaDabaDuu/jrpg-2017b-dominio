@@ -5,8 +5,15 @@ import org.junit.Test;
 
 import dominio.RandomGenerator;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestRandomGenerator.
+ */
 public class TestRandomGenerator {
 
+	/**
+	 * Test.
+	 */
 	@Test
 	public void test() {
 		RandomGenerator ran = new RandomGenerator();

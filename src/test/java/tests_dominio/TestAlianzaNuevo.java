@@ -5,9 +5,16 @@ import org.junit.Test;
 
 import dominio.Alianza;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestAlianzaNuevo.
+ */
 public class TestAlianzaNuevo {
 
 	
+	/**
+	 * Test get nombre.
+	 */
 	@Test
 	public void testGetNombre() {
 		Alianza ali = new Alianza("Los Isotopos");

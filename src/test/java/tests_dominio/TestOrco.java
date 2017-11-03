@@ -10,8 +10,15 @@ import dominio.Humano;
 import dominio.MyRandomStub;
 import dominio.Orco;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestOrco.
+ */
 public class TestOrco {
 
+	/**
+	 * Test golpe defensivo.
+	 */
 	@Test
 	public void testGolpeDefensivo() {
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);
@@ -25,6 +32,9 @@ public class TestOrco {
 			Assert.assertTrue(o.getSalud() == 105);
 	}
 
+	/**
+	 * Test mordisco de vida.
+	 */
 	@Test
 	public void testMordiscoDeVida() {
 		Humano h = new Humano("Nico", 100, 100, 55, 20, 30, new Hechicero(0.2, 0.3, 1.5), 0, 1, 1);

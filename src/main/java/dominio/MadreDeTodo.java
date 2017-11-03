@@ -3,9 +3,10 @@ package dominio;
 
 import java.util.ArrayList;
 
+// TODO: Auto-generated Javadoc
 /**
  * La clase MadreDeTodo tiene las características comunes entre los NPC y los
- * personajes
+ * personajes.
  */
 public abstract class MadreDeTodo {
 

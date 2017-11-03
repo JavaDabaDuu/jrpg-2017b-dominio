@@ -10,8 +10,15 @@ import dominio.MyRandomStub;
 import dominio.NonPlayableCharacter;
 import dominio.Personaje;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestGuerreroNuevo.
+ */
 public class TestGuerreroNuevo {
 
+	/**
+	 * Test habilidad 1.
+	 */
 	@Test
 	public void testHabilidad1() {
 		Personaje p1 = new Humano("Ben Affleck",new Guerrero(),2);
@@ -22,6 +29,9 @@ public class TestGuerreroNuevo {
 		Assert.assertFalse(p1.habilidadCasta1(p2));
 	}
 	
+	/**
+	 * Test habilidad 1 S.
+	 */
 	@Test
 	public void testHabilidad1S() {
 		Personaje p1 = new Humano("Ben Affleck",new Guerrero(),2);
@@ -32,6 +42,9 @@ public class TestGuerreroNuevo {
 		Assert.assertFalse(p1.habilidadCasta1(p2));
 	}
 
+	/**
+	 * Test habilidad 2.
+	 */
 	@Test
 	public void testHabilidad2() {
 		Personaje p1 = new Humano("Ben Affleck",new Guerrero(),2);
@@ -42,6 +55,9 @@ public class TestGuerreroNuevo {
 		Assert.assertFalse(p1.habilidadCasta2(p2));
 	}
 	
+	/**
+	 * Test habilidad 3.
+	 */
 	@Test
 	public void testHabilidad3() {
 		Personaje p1 = new Humano("Ben Affleck",new Guerrero(),2);
@@ -52,6 +68,9 @@ public class TestGuerreroNuevo {
 		Assert.assertFalse(p1.habilidadCasta3(p2));
 	}
 	
+	/**
+	 * Test habilidad 3 T.
+	 */
 	@Test
 	public void testHabilidad3T() {
 		Personaje p1 = new Humano("Ben Affleck",new Guerrero(),2);
@@ -62,6 +81,9 @@ public class TestGuerreroNuevo {
 		Assert.assertFalse(p1.habilidadCasta3(p2));
 	}
 	
+	/**
+	 * Test instance of horrible 3.
+	 */
 	@Test
 	public void testInstanceOfHorrible3() {
 		Personaje p1 = new Humano("Ben Affleck",new Guerrero(),2);

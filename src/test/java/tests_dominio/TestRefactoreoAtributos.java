@@ -11,26 +11,42 @@ import dominio.Humano;
 import dominio.Orco;
 import dominio.Personaje;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestRefactoreoAtributos.
+ */
 public class TestRefactoreoAtributos {
 
+	/**
+	 * Test destreza asesino.
+	 */
 	@Test
 	public void testDestrezaAsesino() {
 		Personaje p = new Humano("Ben Affleck", new Asesino(), 1);
 		Assert.assertEquals(15, p.getDestreza());
 	}
 	
+	/**
+	 * Test fuerza guerrero.
+	 */
 	@Test
 	public void testFuerzaGuerrero() {
 		Personaje p = new Humano("Ben Affleck", new Guerrero(), 1);
 		Assert.assertEquals(15, p.getFuerza());
 	}
 	
+	/**
+	 * Test inteligencia hechicero.
+	 */
 	@Test
 	public void testInteligenciaHechicero() {
 		Personaje p = new Humano("Ben Affleck", new Hechicero(), 1);
 		Assert.assertEquals(15, p.getInteligencia());
 	}
 	
+	/**
+	 * Test full humano.
+	 */
 	@Test
 	public void testFullHumano(){
 		Personaje p = new Humano("Ben Affleck", new Asesino(), 1);
@@ -52,6 +68,9 @@ public class TestRefactoreoAtributos {
 		
 	}
 	
+	/**
+	 * Test full orco.
+	 */
 	@Test
 	public void testFullOrco(){
 		Personaje p = new Orco("Ben Affleck", new Asesino(), 1);
@@ -72,6 +91,9 @@ public class TestRefactoreoAtributos {
 		Assert.assertArrayEquals(hRaza, p.getHabilidadesRaza());
 	}
 
+	/**
+	 * Test full elfo.
+	 */
 	@Test
 	public void testFullElfo(){
 		Personaje p = new Elfo("Ben Affleck", new Asesino(), 1);

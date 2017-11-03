@@ -8,8 +8,15 @@ import dominio.Humano;
 import dominio.MyRandomStub;
 import dominio.Personaje;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestHumanoNuevo.
+ */
 public class TestHumanoNuevo {
 
+	/**
+	 * Test habilidad raza 1.
+	 */
 	@Test
 	public void testHabilidadRaza1() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);
@@ -20,6 +27,9 @@ public class TestHumanoNuevo {
 		Assert.assertFalse(p1.habilidadRaza1(p2));
 	}
 	
+	/**
+	 * Test habilidad raza 2.
+	 */
 	@Test
 	public void testHabilidadRaza2() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);
@@ -32,6 +42,9 @@ public class TestHumanoNuevo {
 		Assert.assertEquals(95, p1.getEnergia());
 	}
 	
+	/**
+	 * Test habilidad raza 2 S.
+	 */
 	@Test
 	public void testHabilidadRaza2S() {
 		Personaje p1 = new Humano("Ben Affleck",new Asesino(),2);

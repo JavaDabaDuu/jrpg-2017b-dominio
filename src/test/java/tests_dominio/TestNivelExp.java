@@ -7,8 +7,15 @@ import dominio.Asesino;
 import dominio.Humano;
 import dominio.Personaje;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestNivelExp.
+ */
 public class TestNivelExp {
 
+	/**
+	 * Test ganar exp.
+	 */
 	@Test
 	public void testGanarExp() {
 		Personaje.cargarTablaNivel();
@@ -17,6 +24,9 @@ public class TestNivelExp {
 		Assert.assertTrue(h.getExperiencia() == 45);
 	}
 
+	/**
+	 * Test subir nivel.
+	 */
 	@Test
 	public void testSubirNivel() {
 		Personaje.cargarTablaNivel();
@@ -26,6 +36,9 @@ public class TestNivelExp {
 		Assert.assertTrue(h.getExperiencia() == 0);
 	}
 
+	/**
+	 * Test level 100.
+	 */
 	@Test
 	public void testLevel100() {
 		Personaje.cargarTablaNivel();

@@ -5,8 +5,15 @@ import org.junit.Test;
 import dominio.*;
 import org.junit.Assert;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestAtributos.
+ */
 public class TestAtributos {
 
+	/**
+	 * Test incrementar fuerza.
+	 */
 	@Test
 	public void testIncrementarFuerza() {
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);
@@ -16,6 +23,9 @@ public class TestAtributos {
 		Assert.assertTrue(h.getAtaque() > 22);
 	}
 
+	/**
+	 * Test incrementar destreza.
+	 */
 	@Test
 	public void testIncrementarDestreza() {
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);
@@ -25,6 +35,9 @@ public class TestAtributos {
 		Assert.assertTrue(h.getDefensa() > 10);
 	}
 
+	/**
+	 * Test incrementar inteligencia.
+	 */
 	@Test
 	public void testIncrementarInteligencia() {
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);

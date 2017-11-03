@@ -9,8 +9,15 @@ import dominio.MyRandomStub;
 import dominio.Orco;
 import dominio.Personaje;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestOrcoNuevo.
+ */
 public class TestOrcoNuevo {
 
+	/**
+	 * Test habilidad raza 1.
+	 */
 	@Test
 	public void testHabilidadRaza1() {
 		Personaje p1 = new Orco("Ben Affleck",new Asesino(),2);
@@ -21,6 +28,9 @@ public class TestOrcoNuevo {
 		Assert.assertFalse(p1.habilidadRaza1(p2));
 	}
 	
+	/**
+	 * Test habilidad raza 1 S.
+	 */
 	@Test
 	public void testHabilidadRaza1S() {
 		Personaje p1 = new Orco("Ben Affleck",new Asesino(),2);
@@ -31,6 +41,9 @@ public class TestOrcoNuevo {
 		Assert.assertFalse(p1.habilidadRaza1(p2));
 	}
 	
+	/**
+	 * Test habilidad raza 2.
+	 */
 	@Test
 	public void testHabilidadRaza2() {
 		Personaje p1 = new Orco("Ben Affleck",new Asesino(),2);
@@ -41,6 +54,9 @@ public class TestOrcoNuevo {
 		Assert.assertFalse(p1.habilidadRaza2(p2));
 	}
 	
+	/**
+	 * Test habilidad raza 2 S.
+	 */
 	@Test
 	public void testHabilidadRaza2S() {
 		Personaje p1 = new Orco("Ben Affleck",new Asesino(),2);

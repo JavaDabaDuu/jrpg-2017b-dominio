@@ -2,6 +2,7 @@ package dominio;
 
 import java.util.Random;
 
+// TODO: Auto-generated Javadoc
 /**
  * La clase MyRandom se utiliza para obtener números aleatorios.<br>
  * Hereda de RandomGenerator.
@@ -9,8 +10,8 @@ import java.util.Random;
 public class MyRandom extends RandomGenerator {
 
 	/**
-	 * El método nextDobule retorna un número double generado de forma aleatoria
-	 * 
+	 * El método nextDobule retorna un número double generado de forma aleatoria.
+	 *
 	 * @return retorna un número double que varía entre 0.0 y 1.0
 	 */
 	@Override
@@ -19,10 +20,9 @@ public class MyRandom extends RandomGenerator {
 	}
 
 	/**
-	 * El método nextInt retorna un número entero generado de forma aleatoria
-	 * 
-	 * @param valor
-	 *            es un número entero utilizado en la generación de número
+	 * El método nextInt retorna un número entero generado de forma aleatoria.
+	 *
+	 * @param valor            es un número entero utilizado en la generación de número
 	 *            entero aleatorio
 	 * @return un número entero generado de forma aleatoria a partir de cierto
 	 *         valor indicado

@@ -9,8 +9,15 @@ import dominio.MyRandomStub;
 import dominio.NonPlayableCharacter;
 import dominio.Personaje;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestEnemigosExperiencia.
+ */
 public class TestEnemigosExperiencia {
 
+	/**
+	 * Test pjvs NPC.
+	 */
 	@Test
 	public void testPjvsNPC() {
 
@@ -26,6 +33,9 @@ public class TestEnemigosExperiencia {
 		Assert.assertTrue(h.getExperiencia() == 30);
 	}
 
+	/**
+	 * Test mas fuerte mas experiencia.
+	 */
 	@Test
 	public void testMasFuerteMasExperiencia() {
 		NonPlayableCharacter npc = new NonPlayableCharacter("Gigante", 1, 0);
@@ -34,6 +44,9 @@ public class TestEnemigosExperiencia {
 		Assert.assertTrue(npc.otorgarExp() < npc2.otorgarExp());
 	}
 
+	/**
+	 * Test pjvs pj.
+	 */
 	@Test
 	public void testPjvsPj() {
 		Humano h = new Humano("Nicolas", new Guerrero(), 1);

@@ -7,12 +7,15 @@ import java.io.Serializable;
 
 import javax.imageio.ImageIO;
 
+// TODO: Auto-generated Javadoc
 /**
  * La clase Item representa un ítem que puede ser equipado por un personaje.<br>
  * Implementa la inerfaz Serializable
  */
 @SuppressWarnings({ "serial", "unused" })
 public class Item implements Serializable {
+	
+	/** The id item. */
 	/*
 	 * Id del ítem.
 	 */
@@ -29,25 +32,20 @@ public class Item implements Serializable {
 	 * Valor de la ubicación de uso del ítem.
 	 */
 	private final int wearLocation;
-	/**
-	 * Bonus de salud que otorga el ítem cuando alguien lo tiene equipado
-	 */
+	
+	/** Bonus de salud que otorga el ítem cuando alguien lo tiene equipado. */
 	private final int bonusSalud;
-	/**
-	 * Bonus de energía que otorga el ítem cuando alguien lo tiene equipado
-	 */
+	
+	/** Bonus de energía que otorga el ítem cuando alguien lo tiene equipado. */
 	private final int bonusEnergia;
-	/**
-	 * Bonus de fuerza que otorga el ítem cuando alguien lo tiene equipado
-	 */
+	
+	/** Bonus de fuerza que otorga el ítem cuando alguien lo tiene equipado. */
 	private final int bonusFuerza;
-	/**
-	 * Bonus de destreza que otorga el ítem cuando alguien lo tiene equipado
-	 */
+	
+	/** Bonus de destreza que otorga el ítem cuando alguien lo tiene equipado. */
 	private final int bonusDestreza;
-	/**
-	 * Bonus de inteligencia que otorga el ítem cuando alguien lo tiene equipado
-	 */
+	
+	/** Bonus de inteligencia que otorga el ítem cuando alguien lo tiene equipado. */
 	private final int bonusInteligencia;
 	/**
 	 * Nombre que tiene la foto cuando el ítem está equipado.

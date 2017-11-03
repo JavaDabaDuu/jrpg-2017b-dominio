@@ -8,8 +8,15 @@ import dominio.Guerrero;
 import dominio.Humano;
 import dominio.MyRandomStub;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestAliarCombatir.
+ */
 public class TestAliarCombatir {
 
+	/**
+	 * Test crear alianza.
+	 */
 	@Test
 	public void testCrearAlianza(){
 		Humano h = new Humano("Nicolas",new Guerrero(),1);
@@ -22,6 +29,9 @@ public class TestAliarCombatir {
 		Assert.assertNotNull(h2.getClan());
 	}
 	
+	/**
+	 * Test dañar.
+	 */
 	@Test
 	public void testDañar(){
 		Humano h = new Humano("Nicolas",new Guerrero(),1);
@@ -35,6 +45,9 @@ public class TestAliarCombatir {
 			Assert.assertTrue(h2.getSalud()==105);
 	}
 	
+	/**
+	 * Test aliar.
+	 */
 	@Test
 	public void testAliar(){
 		Humano h = new Humano("Nicolas",new Guerrero(),1);

@@ -1,6 +1,7 @@
 
 package dominio;
 
+// TODO: Auto-generated Javadoc
 /**
  * La interfaz Peleable define los comportamientos que debe tener quien sea
  * peleable.

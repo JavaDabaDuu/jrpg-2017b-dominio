@@ -1,6 +1,7 @@
 
 package dominio;
 
+// TODO: Auto-generated Javadoc
 /**
  * La clase Guerrero es una casta de Personaje. Hereda de la clase Casta. posee
  * dos constructores. El constructor, llama al constructor de la clase padre
@@ -118,8 +119,8 @@ public class Guerrero extends Casta {
 	}
 
 	/**
-	 * Getter del bonus de fuerza de la casta
-	 * 
+	 * Getter del bonus de fuerza de la casta.
+	 *
 	 * @return la fuerza extra de la casta.
 	 */
 	@Override
@@ -128,8 +129,8 @@ public class Guerrero extends Casta {
 	}
 
 	/**
-	 * Getter del bonus de destreza de la casta
-	 * 
+	 * Getter del bonus de destreza de la casta.
+	 *
 	 * @return 0 para esta casta.
 	 */
 	@Override
@@ -138,8 +139,8 @@ public class Guerrero extends Casta {
 	}
 
 	/**
-	 * Getter del bonus de inteligencia de la casta
-	 * 
+	 * Getter del bonus de inteligencia de la casta.
+	 *
 	 * @return 0 para esta casta.
 	 */
 	@Override
@@ -148,8 +149,8 @@ public class Guerrero extends Casta {
 	}
 
 	/**
-	 * Getter del nombre de la casta
-	 * 
+	 * Getter del nombre de la casta.
+	 *
 	 * @return el nombre de la casta.
 	 */
 	@Override
@@ -158,8 +159,8 @@ public class Guerrero extends Casta {
 	}
 
 	/**
-	 * Getter de las habilidades propias de la casta
-	 * 
+	 * Getter de las habilidades propias de la casta.
+	 *
 	 * @return array con los nombres de las habilidades propias de la casta.
 	 */
 	@Override

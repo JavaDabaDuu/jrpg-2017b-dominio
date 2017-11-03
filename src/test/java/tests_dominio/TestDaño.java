@@ -8,8 +8,15 @@ import dominio.Humano;
 import dominio.MyRandomStub;
 import dominio.Orco;
  
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestDaño.
+ */
 public class TestDaño {
 
+	/**
+	 * Test ataque comun Y la salud no baje de 0.
+	 */
 	@Test
 	public void testAtaqueComunYLaSaludNoBajeDe0() {
 		Humano h = new Humano("Nico", 100, 100, 100, 20, 30, new Guerrero(0.2, 0.3, 1.5), 0, 1, 1);
@@ -27,6 +34,9 @@ public class TestDaño {
 			Assert.assertTrue(o.getSalud() == 0);
 	}
 
+	/**
+	 * Test los muertos no atacan.
+	 */
 	@Test
 	public void testLosMuertosNoAtacan() {
 		Humano h = new Humano("Nico", 100, 100, 25, 0, 30, new Guerrero(0.2, 0, 1.5), 0, 1, 1);

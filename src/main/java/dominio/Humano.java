@@ -1,6 +1,7 @@
 
 package dominio;
 
+// TODO: Auto-generated Javadoc
 /**
  * La clase Humano es una raza de Personaje. Hereda de la clase Personaje.<br>
  * Posee dos constructores. El constructor, llama al constructor de la clase
@@ -122,8 +123,8 @@ public class Humano extends Personaje {
 	}
 
 	/**
-	 * Getter de las habilidades propias de la raza
-	 * 
+	 * Getter de las habilidades propias de la raza.
+	 *
 	 * @return array con los nombres de las habilidades propias de la raza
 	 */
 	@Override
@@ -132,8 +133,8 @@ public class Humano extends Personaje {
 	}
 
 	/**
-	 * Getter del bonus de salud de la raza
-	 * 
+	 * Getter del bonus de salud de la raza.
+	 *
 	 * @return la salud extra de la raza
 	 */
 	@Override
@@ -142,8 +143,8 @@ public class Humano extends Personaje {
 	}
 
 	/**
-	 * Getter del bonus de energía de la raza
-	 * 
+	 * Getter del bonus de energía de la raza.
+	 *
 	 * @return la energía extra de la raza
 	 */
 	@Override
@@ -152,8 +153,8 @@ public class Humano extends Personaje {
 	}
 
 	/**
-	 * Getter del nombre de la raza
-	 * 
+	 * Getter del nombre de la raza.
+	 *
 	 * @return el nombre de la raza
 	 */
 	@Override

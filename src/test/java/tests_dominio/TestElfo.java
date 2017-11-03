@@ -8,8 +8,15 @@ import dominio.Elfo;
 import dominio.Humano;
 import dominio.MyRandomStub;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestElfo.
+ */
 public class TestElfo {
 
+	/**
+	 * Test golpe level.
+	 */
 	@Test
 	public void testGolpeLevel() {
 		Elfo e = new Elfo("Nico", 100, 100, 25, 20, 30, new Asesino(0.2, 0.3, 1.5), 0, 3, 1);
@@ -23,6 +30,9 @@ public class TestElfo {
 			Assert.assertTrue(h.getSalud() == 100);
 	}
 
+	/**
+	 * Test ataque bosque.
+	 */
 	@Test
 	public void testAtaqueBosque() {
 		Elfo e = new Elfo("Nico", 100, 100, 25, 20, 30, new Asesino(0.2, 0.3, 1.5), 0, 3, 1);

@@ -3,6 +3,7 @@ package dominio;
 
 import java.io.Serializable;
 
+// TODO: Auto-generated Javadoc
 /**
  * La clase abstracta Casta representa una casta de personajes.<br>
  * Implementa la interfaz Serializable.<br>
@@ -34,13 +35,11 @@ public abstract class Casta implements Serializable {
 	 * Valor por defecto del daño crítico.
 	 */
 	private static final double DANIO_CRITICO = 1.5;
-	/**
-	 * Variable booleana que indica que no se pudo castear la habilidad
-	 */
+	
+	/** Variable booleana que indica que no se pudo castear la habilidad. */
 	protected static final boolean CASTEO_FALLIDO = false;
-	/**
-	 * Variable booleana que indica que se pudo castear la habilidad
-	 */
+	
+	/** Variable booleana que indica que se pudo castear la habilidad. */
 	protected static final boolean CASTEO_EXITOSO = true;
 
 	/**
@@ -111,46 +110,46 @@ public abstract class Casta implements Serializable {
 	public abstract boolean habilidad3(Personaje caster, Peleable atacado);
 
 	/**
-	 * Método abstracto que permite recibir un bonus de fuerza extra de la casta
-	 * 
+	 * Método abstracto que permite recibir un bonus de fuerza extra de la casta.
+	 *
 	 * @return la fuerza extra de la casta.
 	 */
 	public abstract int recibirFuerzaBonus();
 
 	/**
 	 * Método abstracto que permite recibir un bonus de destreza extra de la
-	 * casta
-	 * 
+	 * casta.
+	 *
 	 * @return la destreza extra de la casta.
 	 */
 	public abstract int recibirDestrezaBonus();
 
 	/**
 	 * Método abstracto que permite recibir un bonus de inteligencia extra de la
-	 * casta
-	 * 
+	 * casta.
+	 *
 	 * @return la inteligencia extra de la casta.
 	 */
 	public abstract int recibirInteligenciaBonus();
 
 	/**
-	 * Getter del nombre de la casta
-	 * 
+	 * Getter del nombre de la casta.
+	 *
 	 * @return el nombre de la casta.
 	 */
 	public abstract String getNombreCasta();
 
 	/**
-	 * Getter abstracto de las habilidades propias de la casta
-	 * 
+	 * Getter abstracto de las habilidades propias de la casta.
+	 *
 	 * @return array de nombres de las habilidades propias de la casta.
 	 */
 	public abstract String[] getHabilidadesCasta();
 
 	/**
 	 * Getter de la probabilidad de realizar un golpe crítico que tiene un
-	 * personaje de la casta
-	 * 
+	 * personaje de la casta.
+	 *
 	 * @return la probabilidad de golpe critico propia de la casta.
 	 */
 	public final double getProbabilidadGolpeCritico() {
@@ -159,10 +158,9 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Setter de la probabilidad de realizar un golpe crítico que tiene un
-	 * personaje de la casta
-	 * 
-	 * @param probabilidadGolpeCritico
-	 *            es la nueva probabilidad de realizar un golpe crítico que
+	 * personaje de la casta.
+	 *
+	 * @param probabilidadGolpeCritico            es la nueva probabilidad de realizar un golpe crítico que
 	 *            tiene un personaje de la casta
 	 */
 	public final void setProbabilidadGolpeCritico(final double probabilidadGolpeCritico) {
@@ -171,8 +169,8 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Getter de la probabilidad de evitar un daño que tiene un personaje de la
-	 * casta
-	 * 
+	 * casta.
+	 *
 	 * @return la probabilidad de evitar un daño que tiene un personaje de la
 	 *         casta
 	 */
@@ -182,10 +180,9 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Setter de la probabilidad de evitar un daño que tiene un personaje de la
-	 * casta
-	 * 
-	 * @param probabilidadEvitarDanio
-	 *            es la nueva probabilidad de evitar un daño que tiene un
+	 * casta.
+	 *
+	 * @param probabilidadEvitarDanio            es la nueva probabilidad de evitar un daño que tiene un
 	 *            personaje de la casta
 	 */
 	public final void setProbabilidadEvitarDaño(final double probabilidadEvitarDanio) {
@@ -193,8 +190,8 @@ public abstract class Casta implements Serializable {
 	}
 
 	/**
-	 * Getter del daño crítico que realiza un personaje de la casta
-	 * 
+	 * Getter del daño crítico que realiza un personaje de la casta.
+	 *
 	 * @return el daño crítico que realiza un personaje de la casta
 	 */
 	public final double getDañoCritico() {
@@ -202,10 +199,9 @@ public abstract class Casta implements Serializable {
 	}
 
 	/**
-	 * Setter del daño crítico que realiza un personaje de la casta
-	 * 
-	 * @param danioCritico
-	 *            es el nuevo daño crítico que realiza un personaje de la casta
+	 * Setter del daño crítico que realiza un personaje de la casta.
+	 *
+	 * @param danioCritico            es el nuevo daño crítico que realiza un personaje de la casta
 	 */
 	public final void setDañoCritico(final double danioCritico) {
 		this.dañoCritico = danioCritico;
@@ -213,10 +209,9 @@ public abstract class Casta implements Serializable {
 
 	/**
 	 * Método que aumenta la probabilidad de evitar un daño que tiene un
-	 * personaje de la casta
+	 * personaje de la casta.
 	 *
-	 * @param bonus
-	 *            es el bonificador que se agrega a la probabilidad de evit un
+	 * @param bonus            es el bonificador que se agrega a la probabilidad de evit un
 	 *            daño que tiene un personajue de la casta
 	 */
 	public final void aumentarEvitarDaño(final double bonus) {
