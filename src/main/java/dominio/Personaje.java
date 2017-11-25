@@ -197,9 +197,15 @@ public abstract class Personaje extends MadreDeTodo
     * Nombre de la casta del personaje.
     */
     private String nombreCasta;
-    
+
+    /**
+     * Modo dios del personaje.
+     */
     private boolean modoDios = false;
-    
+
+    /**
+     * Modo invisible del personaje.
+     */
     private boolean invisible = false;
 
     /**

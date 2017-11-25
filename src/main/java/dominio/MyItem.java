@@ -1,29 +1,32 @@
 package dominio;
 
 
+/*JavaDoc comment MyItem. */
+
 public class MyItem {
-	 private int idItem;
-	    private String nombre;
-	    private int WearLocation;
-	    private int bonusSalud;
-	    private int bonusEnergia;
-	    private int bonusFuerza;
-	    private int bonusDestreza;
-	    private int bonusInteligencia;
-	    private String foto;
-	    private String fotoEquipado;
-	    
-	    public int getIdItem() {
-		return idItem;
-	    }
+    /*Item.*/
+    private int idItem;
+    private String nombre;
+    private int WearLocation;
+    private int bonusSalud;
+    private int bonusEnergia;
+    private int bonusFuerza;
+    private int bonusDestreza;
+    private int bonusInteligencia;
+    private String foto;
+    private String fotoEquipado;
 
-	    public void setIdItem(final int idItem) {
-		this.idItem = idItem;
-	    }
+    public int getIdItem() {
+    return idItem;
+    }
 
-	    public String getNombre() {
-		return nombre;
-	    }
+    public void setIdItem(final int idItem) {
+    this.idItem = idItem;
+    }
+
+    public String getNombre() {
+    return nombre;
+    }
 
 
 	    public void setNombre(final String nombre) {
@@ -46,67 +49,67 @@ public class MyItem {
 	    }
 
 
-	    public void setBonusSalud(final int bonusSalud) {
-		this.bonusSalud = bonusSalud;
-	    }
+    public void setBonusSalud(final int bonusSalud) {
+	this.bonusSalud = bonusSalud;
+    }
 
 
-	    public int getBonusEnergia() {
-		return bonusEnergia;
-	    }
+    public int getBonusEnergia() {
+	return bonusEnergia;
+    }
 
 
-	    public void setBonusEnergia(final int bonusEnergia) {
-		this.bonusEnergia = bonusEnergia;
-	    }
+    public void setBonusEnergia(final int bonusEnergia) {
+	this.bonusEnergia = bonusEnergia;
+    }
 
-	    public int getBonusFuerza() {
-		return bonusFuerza;
-	    }
-
-
-	    public void setBonusFuerza(final int bonusFuerza) {
-		this.bonusFuerza = bonusFuerza;
-	    }
+    public int getBonusFuerza() {
+	return bonusFuerza;
+    }
 
 
-	    public int getBonusDestreza() {
-		return bonusDestreza;
-	    }
+    public void setBonusFuerza(final int bonusFuerza) {
+	this.bonusFuerza = bonusFuerza;
+    }
 
 
-	    public void setBonusDestreza(final int bonusDestreza) {
-		this.bonusDestreza = bonusDestreza;
-	    }
+    public int getBonusDestreza() {
+	return bonusDestreza;
+    }
 
 
-	    public int getBonusInteligencia() {
-		return bonusInteligencia;
-	    }
-
-	  
-	    public void setBonusInteligencia(final int bonusInteligencia) {
-		this.bonusInteligencia = bonusInteligencia;
-	    }
+    public void setBonusDestreza(final int bonusDestreza) {
+	this.bonusDestreza = bonusDestreza;
+    }
 
 
-	    public String getFoto() {
-		return foto;
-	    }
-
-	 
-	    public void setFoto(final String foto) {
-		this.foto = foto;
-	    }
+    public int getBonusInteligencia() {
+	return bonusInteligencia;
+    }
 
 
-	    public String getFotoEquipado() {
-		return fotoEquipado;
-	    }
+    public void setBonusInteligencia(final int bonusInteligencia) {
+	this.bonusInteligencia = bonusInteligencia;
+    }
 
 
-	    public void setFotoEquipado(final String fotoEquipado) {
-		this.fotoEquipado = fotoEquipado;
-	    }
+    public String getFoto() {
+	return foto;
+    }
+
+
+    public void setFoto(final String foto) {
+	this.foto = foto;
+    }
+
+
+    public String getFotoEquipado() {
+	return fotoEquipado;
+    }
+
+
+    public void setFotoEquipado(final String fotoEquipado) {
+	this.fotoEquipado = fotoEquipado;
+    }
 
 }
