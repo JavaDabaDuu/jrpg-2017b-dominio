@@ -1122,19 +1122,19 @@ public abstract class Personaje extends MadreDeTodo
         setItems(aux);
         }
 
-	public boolean modoDiosActivado() {
-		return modoDios;
-	}
+public boolean modoDiosActivado() {
+return modoDios;
+}
 
-	public void activarModoDios() {
-		this.modoDios = !this.modoDios;
-	}
+public void activarModoDios() {
+this.modoDios = !this.modoDios;
+}
 
-	public boolean isInvisible() {
-		return invisible;
-	}
+public boolean isInvisible() {
+return invisible;
+}
 
-	public void setInvisible() {
-		this.invisible = !(this.invisible);
-	}
+public void setInvisible() {
+this.invisible = !(this.invisible);
+}
 }

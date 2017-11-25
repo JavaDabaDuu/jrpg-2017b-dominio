@@ -66,7 +66,7 @@ this.accesorio = accesori;
  * @return the id inventario
  */
 public int getidInventario() {
-	return idInventario;
+return idInventario;
 }
 
 /**
@@ -76,7 +76,7 @@ public int getidInventario() {
  *            the new id inventario
  */
 public void setidInventario(final int idInventarioAux) {
-	this.idInventario = idInventarioAux;
+this.idInventario = idInventarioAux;
 }
 
 /**
@@ -85,7 +85,7 @@ public void setidInventario(final int idInventarioAux) {
  * @return the manos 1
  */
 public int getmanos1() {
-	return manos1;
+return manos1;
 }
 
 /**
@@ -95,7 +95,7 @@ public int getmanos1() {
  *            the new manos 1
  */
 public void setmanos1(final int manos1Aux) {
-	this.manos1 = manos1Aux;
+this.manos1 = manos1Aux;
 }
 
 /**
@@ -104,7 +104,7 @@ public void setmanos1(final int manos1Aux) {
  * @return the manos 2
  */
 public int getmanos2() {
-	return manos2;
+return manos2;
 }
 
 /**
@@ -114,7 +114,7 @@ public int getmanos2() {
  *            the new manos 2
  */
 public void setmanos2(final int manos2Aux) {
-	this.manos2 = manos2Aux;
+this.manos2 = manos2Aux;
 }
 
 /**
@@ -123,7 +123,7 @@ public void setmanos2(final int manos2Aux) {
  * @return the pie
  */
 public int getpie() {
-	return pie;
+return pie;
 }
 
 /**
@@ -133,7 +133,7 @@ public int getpie() {
  *            the new pie
  */
 public void setpie(final int pieAux) {
-	this.pie = pieAux;
+this.pie = pieAux;
 }
 
 /**
@@ -142,7 +142,7 @@ public void setpie(final int pieAux) {
  * @return the cabeza
  */
 public int getcabeza() {
-	return cabeza;
+return cabeza;
 }
 
 /**
@@ -152,7 +152,7 @@ public int getcabeza() {
  *            the new cabeza
  */
 public void setcabeza(final int cabezaAux) {
-	this.cabeza = cabezaAux;
+this.cabeza = cabezaAux;
 }
 
 /**
@@ -161,7 +161,7 @@ public void setcabeza(final int cabezaAux) {
  * @return the pecho
  */
 public int getpecho() {
-	return pecho;
+return pecho;
 }
 
 /**
@@ -171,7 +171,7 @@ public int getpecho() {
  *            the new pecho
  */
 public void setpecho(final int pechoAux) {
-	this.pecho = pechoAux;
+this.pecho = pechoAux;
 }
 
 /**
@@ -180,7 +180,7 @@ public void setpecho(final int pechoAux) {
  * @return the accesorio
  */
 public int getaccesorio() {
-	return accesorio;
+return accesorio;
 }
 
 /**
@@ -190,7 +190,7 @@ public int getaccesorio() {
  *            the new accesorio
  */
 public void setaccesorio(final int accesorioAux) {
-	this.accesorio = accesorioAux;
+this.accesorio = accesorioAux;
 }
 
 }
