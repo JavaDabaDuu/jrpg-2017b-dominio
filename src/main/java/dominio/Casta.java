@@ -2,7 +2,6 @@ package dominio;
 
 import java.io.Serializable;
 
-
 /**
  * La clase abstracta Casta representa una casta de personajes.<br>
  * Implementa la interfaz Serializable.<br>
@@ -110,7 +109,8 @@ public abstract class Casta implements Serializable {
     public abstract boolean habilidad3(Personaje caster, Peleable atacado);
 
     /**
-    * Método abstracto que permite recibir un bonus de fuerza extra de la casta.
+    * Método abstracto que permite recibir un bonus de fuerza extra
+    *  de la casta.
     *
     * @return la fuerza extra de la casta.
     */

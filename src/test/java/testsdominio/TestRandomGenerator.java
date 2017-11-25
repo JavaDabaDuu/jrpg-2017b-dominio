@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import dominio.RandomGenerator;
 
-
 /**
  * The Class TestRandomGenerator.
  */

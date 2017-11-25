@@ -1,7 +1,6 @@
 
 package dominio;
 
-
 /**
  * La clase RandomGenerator genera números random.
  */

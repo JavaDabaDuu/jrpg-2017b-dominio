@@ -2,7 +2,6 @@
 
 package dominio;
 
-
 /**
  * La clase NonPlayableCharacter (NPC) representa a los personajes del juego que
  * no son controlados por humanos.<br>

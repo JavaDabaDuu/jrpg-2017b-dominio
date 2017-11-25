@@ -7,7 +7,6 @@ import org.junit.Test;
 import dominio.Guerrero;
 import dominio.Humano;
 
-
 /**
  * The Class TestAtaqueCritico.
  */

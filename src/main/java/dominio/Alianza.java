@@ -4,7 +4,6 @@ package dominio;
 
 import java.util.LinkedList;
 
-
 /**
  * La clase Alianza agrupa a los jugadores que forman una alianza.
  */

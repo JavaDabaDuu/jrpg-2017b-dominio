@@ -1,8 +1,6 @@
 
 
 package dominio;
-
-
 /**
  * La clase Humano es una raza de Personaje. Hereda de la clase Personaje.<br>
  * Posee dos constructores. El constructor, llama al constructor de la clase

@@ -11,6 +11,7 @@ import dominio.Hechicero;
 import dominio.Humano;
 import dominio.Orco;
 
+
 /**
  * The Class TestPersonaje.
  */
@@ -185,4 +186,26 @@ public class TestPersonaje {
         Assert.assertTrue(o3.getInteligencia()
             == INTELIGENCIA_ESPERADA_ASESINO);
         }
+
+    /**
+     * Test funcionamiento correcto de la invisibilidad.
+     */
+    @Test
+    public void testFuncionamientoCorrectoDeLaInvisibilidad() {
+      Orco o = new Orco("Leonel", new Guerrero(), ID1);
+      Assert.assertTrue(o.isInvisible() == false);
+      o.setInvisible();
+      Assert.assertTrue(o.isInvisible() == true);
+    }
+
+    /**
+     * Test funcionamiento correcto de modo dios.
+     */
+    @Test
+    public void testFuncionamientoCorrectoDeModoDios() {
+      Orco o = new Orco("Leonel", new Guerrero(), ID1);
+      Assert.assertTrue(o.modoDiosActivado() == false);
+      o.activarModoDios();
+      Assert.assertTrue(o.modoDiosActivado() == true);
+    }
 }

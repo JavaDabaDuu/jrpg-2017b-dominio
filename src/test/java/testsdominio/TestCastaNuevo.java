@@ -8,7 +8,6 @@ import dominio.Asesino;
 import dominio.Humano;
 import dominio.Personaje;
 
-
 /**
  * The Class TestCastaNuevo.
  */

@@ -12,7 +12,6 @@ import dominio.Humano;
 import dominio.Orco;
 import dominio.Personaje;
 
-
 /**
  * The Class TestRefactoreoAtributos.
  */

@@ -15,9 +15,6 @@ import dominio.Humano;
 import dominio.Item;
 import dominio.Personaje;
 
-
-
-
 /**
  * The Class TestTrueque.
  */
@@ -65,6 +62,13 @@ public class TestTrueque {
             Assert.assertTrue(p1.getItems().contains(item6));
             Assert.assertTrue(p1.getItems().contains(item3));
             Assert.assertFalse(p1.getItems().contains(item1));
+
+            Assert.assertEquals(item1.getIdItem(), VALOR2);
+            Assert.assertEquals(item1.getBonusSalud(), VALOR1);
+            Assert.assertEquals(item1.getBonusEnergia(), 0);
+            Assert.assertEquals(item1.getBonusFuerza(), 0);
+            Assert.assertEquals(item1.getBonusDestreza(), 0);
+            Assert.assertEquals(item1.getBonusInteligencia(), 0);
 
 
             } catch (IOException e) {

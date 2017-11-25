@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import dominio.NonPlayableCharacter;
 
-
 /**
  * The Class TestNPC.
  */

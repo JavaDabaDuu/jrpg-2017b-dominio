@@ -8,7 +8,6 @@ import dominio.Humano;
 
 import org.junit.Assert;
 
-
 /**
  * The Class TestAtributos.
  */

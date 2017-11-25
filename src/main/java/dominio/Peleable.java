@@ -2,7 +2,6 @@
 
 package dominio;
 
-
 /**
  * La interfaz Peleable define los comportamientos que debe tener quien sea
  * peleable.

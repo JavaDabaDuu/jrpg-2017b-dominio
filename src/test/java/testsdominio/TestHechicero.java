@@ -10,7 +10,6 @@ import dominio.Hechicero;
 import dominio.Humano;
 import dominio.MyRandomStub;
 
-
 /**
  * The Class TestHechicero.
  */

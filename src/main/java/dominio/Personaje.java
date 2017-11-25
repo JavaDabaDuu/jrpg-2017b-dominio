@@ -563,7 +563,8 @@ public abstract class Personaje extends MadreDeTodo
         }
 
     /**
-    * Metodo que establece la energía actual del personaje a la máxima energía
+    * Metodo que establece la energía actual del personaje
+    *  a la máxima energía
     * posible.
     */
     public final void restablecerEnergia() {
@@ -1122,18 +1123,34 @@ public abstract class Personaje extends MadreDeTodo
         setItems(aux);
         }
 
+/**
+ * Modo dios activado.
+ *
+ * @return true, if successful
+ */
 public boolean modoDiosActivado() {
 return modoDios;
 }
 
+/**
+ * Activar modo dios.
+ */
 public void activarModoDios() {
 this.modoDios = !this.modoDios;
 }
 
+/**
+ * Checks if is invisible.
+ *
+ * @return true, if is invisible
+ */
 public boolean isInvisible() {
 return invisible;
 }
 
+/**
+ * Sets the invisible.
+ */
 public void setInvisible() {
 this.invisible = !(this.invisible);
 }

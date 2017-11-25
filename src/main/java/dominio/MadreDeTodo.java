@@ -4,7 +4,6 @@ package dominio;
 
 import java.util.ArrayList;
 
-
 /**
  * La clase MadreDeTodo tiene las características comunes entre los NPC y los
  * personajes.

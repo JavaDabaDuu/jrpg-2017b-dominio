@@ -9,7 +9,6 @@ import dominio.Elfo;
 import dominio.Humano;
 import dominio.MyRandomStub;
 
-
 /**
  * The Class TestElfo.
  */

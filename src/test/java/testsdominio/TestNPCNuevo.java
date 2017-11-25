@@ -10,7 +10,6 @@ import dominio.MyRandomStub;
 import dominio.NonPlayableCharacter;
 import dominio.Personaje;
 
-
 /**
  * The Class TestNPCNuevo.
  */

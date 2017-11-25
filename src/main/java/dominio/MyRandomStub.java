@@ -1,7 +1,6 @@
 
 package dominio;
 
-
 /**
  * La clase MyRandomStub es la encargada de relizar el testing.
  */

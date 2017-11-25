@@ -10,7 +10,8 @@ import javax.imageio.ImageIO;
 
 
 /**
- * La clase Item representa un ítem que puede ser equipado por un personaje.<br>
+ * La clase Item representa un ítem que puede ser equipado
+ * por un personaje.<br>
  * Implementa la inerfaz Serializable
  */
 @SuppressWarnings({ "serial", "unused" })
@@ -37,7 +38,8 @@ public class Item implements Serializable {
     /** Bonus de salud que otorga el ítem cuando alguien lo tiene equipado. */
     private final int bonusSalud;
 
-    /** Bonus de energía que otorga el ítem cuando alguien lo tiene equipado. */
+    /** Bonus de energía que otorga el ítem
+     * cuando alguien lo tiene equipado. */
     private final int bonusEnergia;
 
     /** Bonus de fuerza que otorga el ítem cuando alguien lo tiene equipado. */

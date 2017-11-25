@@ -10,7 +10,6 @@ import dominio.MyRandomStub;
 import dominio.Orco;
 import dominio.Personaje;
 
-
 /**
  * The Class TestOrcoNuevo.
  */

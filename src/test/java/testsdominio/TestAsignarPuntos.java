@@ -8,7 +8,6 @@ import dominio.Guerrero;
 import dominio.Humano;
 import dominio.Personaje;
 
-
 /**
  * The Class TestAsignarPuntos.
  */

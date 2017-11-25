@@ -14,7 +14,6 @@ import dominio.MyRandomStub;
 import dominio.Personaje;
 
 
-
 /**
  * The Class TestPersonajeNuevo.
  */

@@ -1,6 +1,7 @@
 
 package dominio;
 
+
 /**
  * The Class Inventario.
  */
@@ -33,8 +34,11 @@ private int accesorio;
 public Inventario() {
 
 }
-/*
- * Inventario.
+
+/**
+ * Instantiates a new inventario.
+ *
+ * @param idInventaro the id inventaro
  */
 public Inventario(final int idInventaro) {
 this.idInventario = idInventaro;
@@ -46,7 +50,17 @@ this.manos1 = -1;
 this.manos2 = -1;
 }
 
-/*JavaDOc Inventario. */
+/**
+ * Instantiates a new inventario.
+ *
+ * @param idInventaro the id inventaro
+ * @param mans1 the mans 1
+ * @param mans2 the mans 2
+ * @param pi the pi
+ * @param cabez the cabez
+ * @param pech the pech
+ * @param accesori the accesori
+ */
 public Inventario(final int idInventaro, final int mans1,
 final int mans2, final int pi,
 final int cabez, final int pech, final int accesori) {

@@ -7,7 +7,6 @@ import org.junit.Test;
 import dominio.MyRandomStub;
 import dominio.RandomGenerator;
 
-
 /**
  * The Class testRandomStub.
  */
