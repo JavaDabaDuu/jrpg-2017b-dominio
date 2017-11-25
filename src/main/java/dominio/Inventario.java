@@ -48,16 +48,16 @@ this.manos2 = -1;
 
 /*JavaDOc Inventario. */
 public Inventario(final int idInventaro, final int mans1,
-	final int mans2, final int pi,
-	final int cabez, final int pech, final int accesori) {
-	super();
-	this.idInventario = idInventaro;
-	this.manos1 = mans1;
-	this.manos2 = mans2;
-	this.pie = pi;
-	this.cabeza = cabez;
-	this.pecho = pech;
-	this.accesorio = accesori;
+final int mans2, final int pi,
+final int cabez, final int pech, final int accesori) {
+super();
+this.idInventario = idInventaro;
+this.manos1 = mans1;
+this.manos2 = mans2;
+this.pie = pi;
+this.cabeza = cabez;
+this.pecho = pech;
+this.accesorio = accesori;
 }
 
 /**

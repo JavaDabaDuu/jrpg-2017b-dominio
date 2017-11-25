@@ -2,6 +2,27 @@
 package dominio;
 
 public class Mochila {
+
+private static final int CASO_1 = 1;
+private static final int CASO_2 = 2;
+private static final int CASO_3 = 3;
+private static final int CASO_4 = 4;
+private static final int CASO_5 = 5;
+private static final int CASO_6 = 6;
+private static final int CASO_7 = 7;
+private static final int CASO_8 = 8;
+private static final int CASO_9 = 9;
+private static final int CASO_10 = 10;
+private static final int CASO_11 = 11;
+private static final int CASO_12 = 12;
+private static final int CASO_13 = 13;
+private static final int CASO_14 = 14;
+private static final int CASO_15 = 15;
+private static final int CASO_16 = 16;
+private static final int CASO_17 = 17;
+private static final int CASO_18 = 18;
+private static final int CASO_19 = 19;
+private static final int CASO_20 = 20;
 private int idMochila;
 private int item1;
 private int item2;
@@ -55,51 +76,51 @@ this.item20 = -1;
 }
 
 public int getIdMochila() {
-	return idMochila;
+return idMochila;
 }
 
 public void setIdMochila(int idMochila) {
-	this.idMochila = idMochila;
+this.idMochila = idMochila;
 }
 
 public int getItem1() {
-	return item1;
+return item1;
 }
 
 public void setItem1(int item1) {
-	this.item1 = item1;
+this.item1 = item1;
 }
 
 public int getItem2() {
-	return item2;
+return item2;
 }
 
 public void setItem2(int item2) {
-	this.item2 = item2;
+this.item2 = item2;
 }
 
 public int getItem3() {
-	return item3;
+return item3;
 }
 
 public void setItem3(int item3) {
-	this.item3 = item3;
+this.item3 = item3;
 }
 
 public int getItem4() {
-	return item4;
+return item4;
 }
 
 public void setItem4(int item4) {
-	this.item4 = item4;
+this.item4 = item4;
 }
 
 public int getItem5() {
-	return item5;
+return item5;
 }
 
 public void setItem5(int item5) {
-	this.item5 = item5;
+this.item5 = item5;
 }
 
 public int getItem6() {
@@ -224,45 +245,45 @@ public final void setItem20(final int item20) {
 
 	public int getItemId(final int i) {
 		switch (i) {
-		case 1:
+		case CASO_1:
 			return getItem1();
-		case 2:
+		case CASO_2:
 			return getItem2();
-		case 3:
+		case CASO_3:
 			return getItem3();
-		case 4:
+		case CASO_4:
 			return getItem4();
-		case 5:
+		case CASO_5:
 			return getItem5();
-		case 6:
+		case CASO_6:
 			return getItem6();
-		case 7:
+		case CASO_7:
 			return getItem7();
-		case 8:
+		case CASO_8:
 			return getItem8();
-		case 9:
+		case CASO_9:
 			return getItem9();
-		case 10:
+		case CASO_10:
 			return getItem10();
-		case 11:
+		case CASO_11:
 			return getItem11();
-		case 12:
+		case CASO_12:
 			return getItem12();
-		case 13:
+		case CASO_13:
 			return getItem13();
-		case 14:
+		case CASO_14:
 			return getItem14();
-		case 15:
+		case CASO_15:
 			return getItem15();
-		case 16:
+		case CASO_16:
 			return getItem16();
-		case 17:
+		case CASO_17:
 			return getItem17();
-		case 18:
+		case CASO_18:
 			return getItem18();
-		case 19:
+		case CASO_19:
 			return getItem19();
-		case 20:
+		case CASO_20:
 			return getItem20();
 		default:
 			break;
@@ -301,45 +322,45 @@ public final void setItem20(final int item20) {
 	public void setItem(final int pos, final int item) {
 
 		switch (pos) {
-		case 1:
+		case CASO_1:
 			setItem1(item);
-		case 2:
+		case CASO_2:
 			setItem2(item);
-		case 3:
+		case CASO_3:
 			setItem3(item);
-		case 4:
+		case CASO_4:
 			setItem4(item);
-		case 5:
+		case CASO_5:
 			setItem5(item);
-		case 6:
+		case CASO_6:
 			setItem6(item);
-		case 7:
+		case CASO_7:
 			setItem7(item);
-		case 8:
+		case CASO_8:
 			setItem8(item);
-		case 9:
+		case CASO_9:
 			setItem9(item);
-		case 10:
+		case CASO_10:
 			setItem10(item);
-		case 11:
+		case CASO_11:
 			setItem11(item);
-		case 12:
+		case CASO_12:
 			setItem12(item);
-		case 13:
+		case CASO_13:
 			setItem13(item);
-		case 14:
+		case CASO_14:
 			setItem14(item);
-		case 15:
+		case CASO_15:
 			setItem15(item);
-		case 16:
+		case CASO_16:
 			setItem16(item);
-		case 17:
+		case CASO_17:
 			setItem17(item);
-		case 18:
+		case CASO_18:
 			setItem18(item);
-		case 19:
+		case CASO_19:
 			setItem19(item);
-		case 20:
+		case CASO_20:
 			setItem20(item);
 		default:
 			break;
