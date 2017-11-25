@@ -199,6 +199,8 @@ public abstract class Personaje extends MadreDeTodo
     private String nombreCasta;
     
     private boolean modoDios = false;
+    
+    private boolean invisible = false;
 
     /**
     * Getter de las habilidades de casta del personaje.
@@ -1120,5 +1122,13 @@ public abstract class Personaje extends MadreDeTodo
 
 	public void activarModoDios() {
 		this.modoDios = !this.modoDios;
+	}
+
+	public boolean isInvisible() {
+		return invisible;
+	}
+
+	public void setInvisible() {
+		this.invisible = !(this.invisible);
 	}
 }
